@@ -2,7 +2,7 @@ export const metadata = {
   title: "mix servlog",
   description: "",
   openGraph: {
-    title: "mix servlog",
+    title: "Mix servlog",
     description: "",
     url: "",
     siteName: "",

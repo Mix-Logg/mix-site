@@ -14,7 +14,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-Br" className="h-full antialiased" suppressHydrationWarning>
       <head>
-        <title>Meu app de exemplo</title>
       </head>
       <body
         className={`${roboto.variable} overflow-x-hidden bg-secondary font-sans text-white`}
