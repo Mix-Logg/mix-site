@@ -1,8 +1,8 @@
 export const metadata = {
-  title: "mix servlog",
+  title: "Mixservlog",
   description: "",
   openGraph: {
-    title: "Mix servlog",
+    title: "Mixservlog",
     description: "",
     url: "",
     siteName: "",
