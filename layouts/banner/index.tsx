@@ -44,7 +44,8 @@ const Banner = () => {
           </motion.p>
         </div>
       </div>
-      <Image src={Cars} alt="Carros MIX" className="md:w-1/3 p-6  md:p-8"  />
+      <Image src={Cars} alt="Carros MIX" className="hidden md:flex" width={400} height={400}/>
+      <Image src={Cars} alt="Carros MIX" className="md:hidden p-8" width={400} height={400}/>
     </div>
   );
 };

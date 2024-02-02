@@ -53,7 +53,7 @@ export default function Header() {
        
 
         <div className="flex items-center gap-56 md:hidden">
-          <Image src={BrandSvg} alt="Logo life sound" width={80} height={20} />
+          <Image src={BrandSvg} alt="Logo life sound" width={50} height={20} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

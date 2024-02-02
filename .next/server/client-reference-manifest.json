@@ -747,7 +747,7 @@
         "id": "(sc_client)/./assets/svg/cars.svg",
         "name": "*",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -755,7 +755,7 @@
         "id": "(sc_client)/./assets/svg/cars.svg",
         "name": "",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -763,7 +763,7 @@
         "id": "(sc_client)/./assets/svg/cars.svg",
         "name": "default",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       }
@@ -773,7 +773,7 @@
         "id": "(sc_client)/./assets/svg/logo.svg",
         "name": "*",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -781,7 +781,7 @@
         "id": "(sc_client)/./assets/svg/logo.svg",
         "name": "",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -789,7 +789,7 @@
         "id": "(sc_client)/./assets/svg/logo.svg",
         "name": "default",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       }
@@ -799,7 +799,7 @@
         "id": "(sc_client)/./app/layout.tsx",
         "name": "*",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -807,7 +807,7 @@
         "id": "(sc_client)/./app/layout.tsx",
         "name": "",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -815,7 +815,7 @@
         "id": "(sc_client)/./app/layout.tsx",
         "name": "default",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       }
@@ -825,7 +825,7 @@
         "id": "(sc_client)/./node_modules/next/dist/client/image.js",
         "name": "*",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -833,7 +833,7 @@
         "id": "(sc_client)/./node_modules/next/dist/client/image.js",
         "name": "",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -841,7 +841,7 @@
         "id": "(sc_client)/./node_modules/next/dist/client/image.js",
         "name": "default",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       }
@@ -851,7 +851,7 @@
         "id": "(sc_client)/./node_modules/next/dist/client/link.js",
         "name": "*",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -859,7 +859,7 @@
         "id": "(sc_client)/./node_modules/next/dist/client/link.js",
         "name": "",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -867,7 +867,7 @@
         "id": "(sc_client)/./node_modules/next/dist/client/link.js",
         "name": "default",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       }
@@ -877,7 +877,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "*",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -885,7 +885,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -893,7 +893,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "default",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -901,7 +901,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "defaultHead",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -909,7 +909,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "charSet",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -917,7 +917,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "name",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -925,7 +925,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "content",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -933,7 +933,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "\"title\"",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -941,7 +941,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "\"base\"",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -949,7 +949,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "\"meta\"",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -957,7 +957,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "TODO(prateekbh@)",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -965,7 +965,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "\"https",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -973,7 +973,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "here",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -981,7 +981,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "https",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -989,7 +989,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "reduceComponentsToState",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -997,7 +997,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "headManager",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -1005,7 +1005,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "inAmpMode",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       },
@@ -1013,7 +1013,7 @@
         "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
         "name": "value",
         "chunks": [
-          "app/layout:static/chunks/app/layout.js"
+          "app/not-found:static/chunks/app/not-found.js"
         ],
         "async": false
       }
@@ -1021,11 +1021,11 @@
   },
   "edgeSSRModuleMapping": {},
   "cssFiles": {
-    "/home/matheus/Documents/mix-site/app/not-found": [
-      "static/css/app/not-found.css"
-    ],
     "/home/matheus/Documents/mix-site/app/layout": [
       "static/css/app/layout.css"
+    ],
+    "/home/matheus/Documents/mix-site/app/not-found": [
+      "static/css/app/not-found.css"
     ]
   },
   "clientModules": {
@@ -2729,23 +2729,23 @@
       "id": "null",
       "name": "default",
       "chunks": [
-        "static/css/app/not-found.css",
-        "static/css/app/layout.css"
+        "static/css/app/layout.css",
+        "static/css/app/not-found.css"
       ]
     },
     "/home/matheus/Documents/mix-site/node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Roboto_Flex\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-roboto\"}],\"variableName\":\"roboto\"}#": {
       "id": "null",
       "name": "default",
       "chunks": [
-        "static/css/app/not-found.css",
-        "static/css/app/layout.css"
+        "static/css/app/layout.css",
+        "static/css/app/not-found.css"
       ]
     },
     "/home/matheus/Documents/mix-site/assets/svg/cars.svg": {
       "id": "(app-client)/./assets/svg/cars.svg",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2753,7 +2753,7 @@
       "id": "(app-client)/./assets/svg/cars.svg",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2761,7 +2761,7 @@
       "id": "(app-client)/./assets/svg/cars.svg",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2769,7 +2769,7 @@
       "id": "(app-client)/./assets/svg/logo.svg",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2777,7 +2777,7 @@
       "id": "(app-client)/./assets/svg/logo.svg",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2785,7 +2785,7 @@
       "id": "(app-client)/./assets/svg/logo.svg",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2793,7 +2793,7 @@
       "id": "(app-client)/./app/layout.tsx",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2801,7 +2801,7 @@
       "id": "(app-client)/./app/layout.tsx",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2809,7 +2809,7 @@
       "id": "(app-client)/./app/layout.tsx",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2817,7 +2817,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2825,7 +2825,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2833,7 +2833,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image.js",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2841,7 +2841,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image.js",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2849,7 +2849,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image.js",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2857,7 +2857,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image.js",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2865,7 +2865,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2873,7 +2873,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2881,7 +2881,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2889,7 +2889,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2897,7 +2897,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2905,7 +2905,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2913,7 +2913,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2921,7 +2921,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2929,7 +2929,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2937,7 +2937,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2945,7 +2945,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2953,7 +2953,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "default",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2961,7 +2961,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "defaultHead",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2969,7 +2969,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "defaultHead",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2977,7 +2977,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "charSet",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2985,7 +2985,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "charSet",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -2993,7 +2993,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "name",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3001,7 +3001,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "name",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3009,7 +3009,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "content",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3017,7 +3017,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "content",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3025,7 +3025,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"title\"",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3033,7 +3033,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"title\"",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3041,7 +3041,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"base\"",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3049,7 +3049,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"base\"",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3057,7 +3057,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"meta\"",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3065,7 +3065,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"meta\"",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3073,7 +3073,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "TODO(prateekbh@)",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3081,7 +3081,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "TODO(prateekbh@)",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3089,7 +3089,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"https",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3097,7 +3097,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "\"https",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3105,7 +3105,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "here",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3113,7 +3113,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "here",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3121,7 +3121,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "https",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3129,7 +3129,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "https",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3137,7 +3137,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "reduceComponentsToState",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3145,7 +3145,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "reduceComponentsToState",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3153,7 +3153,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "headManager",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3161,7 +3161,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "headManager",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3169,7 +3169,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "inAmpMode",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3177,7 +3177,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "inAmpMode",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3185,7 +3185,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "value",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     },
@@ -3193,7 +3193,7 @@
       "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
       "name": "value",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/not-found:static/chunks/app/not-found.js"
       ],
       "async": false
     }
