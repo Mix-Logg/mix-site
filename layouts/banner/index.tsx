@@ -8,7 +8,7 @@ const Banner = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const opcoes = ["História", "Conexões", "Amigos"];
+      const opcoes = ["Histórias", "Conexões", "Amigos"];
       const indiceAtual = opcoes.indexOf(titulo);
       const novoIndice = (indiceAtual + 1) % opcoes.length;
 
