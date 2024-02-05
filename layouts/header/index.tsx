@@ -71,7 +71,7 @@ export default function Header() {
 
           {isMenuOpen && (
             <motion.div
-              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-70"
+              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
