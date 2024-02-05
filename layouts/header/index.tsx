@@ -90,21 +90,21 @@ export default function Header() {
                 <div className="flex flex-col items-center p-4 text-left">
                   <FadeIn className="flex flex-col">
                     <Link
-                      className="h-12 justify-center text-2xl font-semibold text-complement1 "
+                      className="h-12 justify-center text-3xl font-bold text-complement1 "
                       href="/sobre-nos"
                     >
                       Sobre nós
                     </Link>
 
                     <Link
-                      className="h-12  justify-center text-2xl font-semibold text-complement1 "
+                      className="h-12  justify-center text-3xl font-bold text-complement1 "
                       href="/processos"
                     >
                       Entregadores
                     </Link>
 
                     <Link
-                      className="h-12  justify-center text-2xl font-semibold text-complement1 "
+                      className="h-12  justify-center text-3xl font-bold text-complement1 "
                       href="/portifolios"
                     >
                       Produtos
