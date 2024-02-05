@@ -5,11 +5,11 @@ import Cars from "../../assets/svg/cars.svg";
 import { FadeIn } from "../../components/animations/fadeIn";
 
 const Banner = () => {
-  const [titulo, setTitulo] = useState("História");
+  const [titulo, setTitulo] = useState("Histórias");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const opcoes = ["Histórias", "Conexões", "Amigos"];
+      const opcoes = [ "Conexões", "Amigos"];
       const indiceAtual = opcoes.indexOf(titulo);
       const novoIndice = (indiceAtual + 1) % opcoes.length;
 
