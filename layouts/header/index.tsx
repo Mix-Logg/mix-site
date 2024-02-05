@@ -5,7 +5,7 @@ import Button from "../../components/button/index";
 import Link from "next/link";
 import Banner from "../banner";
 import { motion } from "framer-motion";
-import { HiBars3BottomRight } from "react-icons/hi2";
+import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,42 +57,58 @@ export default function Header() {
               width={50}
               height={20}
             />
-
-<motion.div
-      className="absolute right-0 mr-6  cursor-pointer text-secondary"
-      whileHover={{ scale: 1.1 }} // Aumenta a escala quando o mouse passa por cima
-      animate={{
-        y: [0, -2, 0], // Animação de vaivém no eixo Y
-      }}
-      transition={{ repeat: Infinity, duration: 1.5 }} // Repete a animação constantemente
-      onClick={toggleMenu}
-    >
-      <HiBars3BottomRight className="h-6 w-6"/>
-    </motion.div>
+           {!isMenuOpen && (
+              <motion.div
+                className="absolute right-0 mr-6 cursor-pointer text-secondary"
+                whileHover={{ scale: 1.1 }}
+                animate={{
+                  y: [0, -3, 0],
+                }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+                onClick={toggleMenu}
+              >
+                <HiBars3BottomRight className="h-6 w-6" />
+              </motion.div>
+            )}
           </div>
+
           {isMenuOpen && (
             <div
-              className="fixed left-0 top-0  z-20 h-full w-full bg-black bg-opacity-50"
-              onClick={closeMenu}
+              className="fixed left-0 top-0  z-20 h-full w-full bg-black bg-opacity-90"
+              
             >
-              <div className="absolute right-0 top-0 z-30 h-full w-1/2 rounded-s-xl bg-white shadow-md">
+              <div className="p-10 flex justify-end w-full">
                 <button
-                  className="absolute -left-6 top-4 rounded-full bg-secondary p-4 px-3"
-                  onClick={toggleMenu}
-                >
-                  {/* <Image src={Arrow} alt="flecha" width={20} height={20} /> */}
-                </button>
-                <ul className="mt-14 flex flex-col items-start p-4">
-                  <li className="mb-2">
-                    <Link href="#encontrar-musica">Encontrar Música</Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link href="#como-funciona">Como Funciona</Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link href="#quem-somos">Quem Somos</Link>
-                  </li>
-                </ul>
+                className="flex text-primary"
+                onClick={toggleMenu}
+              >
+                <HiMiniXMark className="w-8 h-8"/>
+              </button>
+
+              </div>
+              
+              <div className="flex flex-col items-center text-left p-4">
+                  <Link
+                    className="text-xl font-medium text-complement1 "
+                    href="/sobre-nos"
+                  >
+                    Sobre nós
+                  </Link>
+               
+                  <Link
+                    className="text-xl font-medium text-complement1 "
+                    href="/processos"
+                  >
+                    Entregadores
+                  </Link>
+               
+                  <Link
+                    className="text-xl font-medium text-complement1 "
+                    href="/portifolios"
+                  >
+                    Produtos
+                  </Link>
+                
               </div>
             </div>
           )}
