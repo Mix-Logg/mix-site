@@ -76,7 +76,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="fixed left-0 top-0  z-20 h-full w-full bg-black bg-opacity-90">
+              <div className="fixed left-0 top-0  z-20 h-full w-full bg-black bg-opacity-30">
                 <div className="flex w-full justify-end p-10">
                   <Floating
                     className={
