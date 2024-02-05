@@ -645,6 +645,9 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.visible {
+  visibility: visible;
+}
 .fixed {
   position: fixed;
 }
@@ -726,6 +729,15 @@ select {
 }
 .h-8 {
   height: 2rem;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-1 {
+  height: 0.25rem;
+}
+.h-12 {
+  height: 3rem;
 }
 .w-1\/2 {
   width: 50%;
@@ -916,6 +928,10 @@ select {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -924,6 +940,9 @@ select {
 }
 .font-medium {
   font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
 }
 .text-blue-500 {
   --tw-text-opacity: 1;

@@ -6,6 +6,8 @@ import Link from "next/link";
 import Banner from "../banner";
 import { motion } from "framer-motion";
 import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
+import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
+import  Floating  from "../../components/animations/floating";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,60 +59,58 @@ export default function Header() {
               width={50}
               height={20}
             />
-           {!isMenuOpen && (
-              <motion.div
-                className="absolute right-0 mr-6 cursor-pointer text-terciary"
-                whileHover={{ scale: 1.1 }}
-                animate={{
-                  y: [0, -5, 0],
-                }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-                onClick={toggleMenu}
-              >
-                <HiBars3BottomRight className="h-6 w-6" />
-              </motion.div>
+            {!isMenuOpen && (
+
+              <Floating className={'absolute right-0 mr-6 cursor-pointer text-terciary'} onClick={toggleMenu}> <HiBars3BottomRight className="h-6 w-6" /></Floating>
+             
+               
+            
             )}
           </div>
 
           {isMenuOpen && (
-            <div
-              className="fixed left-0 top-0  z-20 h-full w-full bg-black bg-opacity-90"
-              
+            <motion.div
+              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-90"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
             >
-              <div className="p-10 flex justify-end w-full">
-                <button
-                className="flex text-primary"
-                onClick={toggleMenu}
-              >
-                <HiMiniXMark className="w-8 h-8"/>
-              </button>
+              <div className="fixed left-0 top-0  z-20 h-full w-full bg-black bg-opacity-90">
+                <div className="flex w-full justify-end p-10">
+                <Floating className={"absolute right-0 mr-6 cursor-pointer text-primary"}
+                 
+                    onClick={toggleMenu}
+                  >
+                    <HiMiniXMark className="h-8 w-8" />
+                  </Floating>
+                </div>
 
+                <div className="flex flex-col items-center p-4 text-left">
+                  <FadeIn className="flex flex-col">
+                    <Link
+                      className="h-12 justify-center text-2xl font-semibold text-complement1 "
+                      href="/sobre-nos"
+                    >
+                      Sobre nós
+                    </Link>
+
+                    <Link
+                      className="h-12  justify-center text-2xl font-semibold text-complement1 "
+                      href="/processos"
+                    >
+                      Entregadores
+                    </Link>
+
+                    <Link
+                      className="h-12  justify-center text-2xl font-semibold text-complement1 "
+                      href="/portifolios"
+                    >
+                      Produtos
+                    </Link>
+                  </FadeIn>
+                </div>
               </div>
-              
-              <div className="flex flex-col items-center text-left p-4">
-                  <Link
-                    className="text-xl font-medium text-complement1 "
-                    href="/sobre-nos"
-                  >
-                    Sobre nós
-                  </Link>
-               
-                  <Link
-                    className="text-xl font-medium text-complement1 "
-                    href="/processos"
-                  >
-                    Entregadores
-                  </Link>
-               
-                  <Link
-                    className="text-xl font-medium text-complement1 "
-                    href="/portifolios"
-                  >
-                    Produtos
-                  </Link>
-                
-              </div>
-            </div>
+            </motion.div>
           )}
         </nav>
         <Button text={"Contato"} borderColorHover={"primary md:flex hidden"} />

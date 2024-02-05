@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Cars from "../../assets/svg/cars.svg";
+import { FadeIn } from "../../components/animations/fadeIn";
 
 const Banner = () => {
   const [titulo, setTitulo] = useState("História");
@@ -19,6 +20,7 @@ const Banner = () => {
   }, [titulo]);
 
   return (
+    <FadeIn>
     <div className="md:flex items-center justify-center gap-36 py-10">
       <div className="flex flex-col px-7 items-start ">
         <p className="md:text-base text-sm font-medium text-secondary">
@@ -47,6 +49,7 @@ const Banner = () => {
       <Image src={Cars} alt="Carros MIX" className="hidden md:flex" width={400} height={400}/>
       <Image src={Cars} alt="Carros MIX" className="md:hidden p-8" width={400} height={400}/>
     </div>
+    </FadeIn>
   );
 };
 
