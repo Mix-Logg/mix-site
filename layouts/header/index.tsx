@@ -59,10 +59,10 @@ export default function Header() {
             />
            {!isMenuOpen && (
               <motion.div
-                className="absolute right-0 mr-6 cursor-pointer text-secondary"
+                className="absolute right-0 mr-6 cursor-pointer text-terciary"
                 whileHover={{ scale: 1.1 }}
                 animate={{
-                  y: [0, -3, 0],
+                  y: [0, -5, 0],
                 }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
                 onClick={toggleMenu}
