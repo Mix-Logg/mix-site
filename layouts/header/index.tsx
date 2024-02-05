@@ -7,7 +7,7 @@ import Banner from "../banner";
 import { motion } from "framer-motion";
 import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
 import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
-import  Floating  from "../../components/animations/floating";
+import Floating from "../../components/animations/floating";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,25 +60,28 @@ export default function Header() {
               height={20}
             />
             {!isMenuOpen && (
-
-              <Floating className={'absolute right-0 mr-6 cursor-pointer text-terciary'} onClick={toggleMenu}> <HiBars3BottomRight className="h-6 w-6" /></Floating>
-             
-               
-            
+              <Floating
+                className={"absolute right-0 mr-6 cursor-pointer text-terciary"}
+                onClick={toggleMenu}
+              >
+                <HiBars3BottomRight className="h-6 w-6" />
+              </Floating>
             )}
           </div>
 
           {isMenuOpen && (
             <motion.div
-              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-90"
+              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-70"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               <div className="fixed left-0 top-0  z-20 h-full w-full bg-black bg-opacity-90">
                 <div className="flex w-full justify-end p-10">
-                <Floating className={"absolute right-0 mr-6 cursor-pointer text-primary"}
-                 
+                  <Floating
+                    className={
+                      "absolute right-0 mr-6 cursor-pointer text-primary"
+                    }
                     onClick={toggleMenu}
                   >
                     <HiMiniXMark className="h-8 w-8" />
