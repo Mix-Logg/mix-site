@@ -38,7 +38,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className=" items-center justify-center gap-2 md:flex md:">
+        <div className="flex flex-col items-center justify-center gap-2 md:flex ">
           <div className="flex flex-col items-start gap-3 p-3 text-lg font-normal text-terciary">
             <div className="inline-flex rounded-xl bg-primary p-2">
               <HiOutlineMail className="h-6 w-6 text-complement1" />
