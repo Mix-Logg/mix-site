@@ -1,3 +1,6 @@
+import Banner from "../layouts/banner";
+import Header from "../layouts/header";
+
 export const metadata = {
   title: "Mixservlog",
   description: "",
@@ -36,5 +39,11 @@ export default function Home() {
 
   
  
-  return <></>;
+  return (
+<>
+<Header/>
+<Banner/>
+</>
+
+  );
 }

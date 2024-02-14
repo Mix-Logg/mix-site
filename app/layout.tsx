@@ -4,9 +4,9 @@ import Header from "../layouts/header";
 import "../assets/css/globals.css";
 import { Roboto_Flex as Roboto } from "next/font/google";
 import { ReactNode } from "react";
-import Image from "next/image";
 import ptBR from "dayjs/locale/pt-br";
 import dayjs from "dayjs";
+import Banner from "../layouts/banner";
 
 dayjs.locale(ptBR);
 
@@ -18,9 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${roboto.variable} overflow-x-hidden bg-complement1 font-sans`}
       >
-        
-        <Header />
-        
+        {children}
       </body>
     </html>
   );

@@ -1,9 +1,10 @@
+"use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import BrandSvg from "../../assets/svg/logo.svg";
 import Button from "../../components/button/index";
 import Link from "next/link";
-import Banner from "../banner";
 import { motion } from "framer-motion";
 import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
 import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
@@ -15,21 +16,27 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+
   return (
     <>
       <header className="relative flex items-center justify-between gap-x-10 px-5 py-2 md:px-40">
         <div className="hidden md:flex">
-          <Image src={BrandSvg} alt="Logo life sound" width={70} height={30} />
+          <Link href={`/`}>
+            <Image
+              src={BrandSvg}
+              alt="Logo life sound"
+              width={70}
+              height={30}
+              className="transition duration-300 ease-in-out hover:opacity-80"
+            />
+          </Link>
         </div>
         <nav className="flex items-center text-sm font-bold">
           <ul className="hidden items-center justify-center gap-x-5 md:flex">
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
-                href="/sobre-nos"
+                href="/NotFoundPage"
               >
                 Sobre nós
               </Link>
@@ -47,7 +54,7 @@ export default function Header() {
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
                 href="/portifolios"
               >
-                Produtos
+                Serviços
               </Link>
             </li>
           </ul>
@@ -76,47 +83,52 @@ export default function Header() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-                <div className="flex w-full justify-end p-10">
-                  <Floating
-                    className={
-                      "absolute right-0 mr-6 cursor-pointer text-primary"
-                    }
-                    onClick={toggleMenu}
+              <div className="flex w-full justify-end p-10">
+                <Floating
+                  className={
+                    "absolute right-0 mr-6 cursor-pointer text-primary"
+                  }
+                  onClick={toggleMenu}
+                >
+                  <HiMiniXMark className="h-8 w-8" />
+                </Floating>
+              </div>
+
+              <div className="flex flex-col items-center p-4 text-left">
+                <FadeIn className="flex flex-col">
+                  <Link
+                    className="h-12 justify-center text-3xl font-bold text-complement1 "
+                    href="/sobre-nos"
                   >
-                    <HiMiniXMark className="h-8 w-8" />
-                  </Floating>
-                </div>
+                    Sobre nós
+                  </Link>
 
-                <div className="flex flex-col items-center p-4 text-left">
-                  <FadeIn className="flex flex-col">
-                    <Link
-                      className="h-12 justify-center text-3xl font-bold text-complement1 "
-                      href="/sobre-nos"
-                    >
-                      Sobre nós
-                    </Link>
+                  <Link
+                    className="h-12  justify-center text-3xl font-bold text-complement1 "
+                    href="/processos"
+                  >
+                    Entregadores
+                  </Link>
 
-                    <Link
-                      className="h-12  justify-center text-3xl font-bold text-complement1 "
-                      href="/processos"
-                    >
-                      Entregadores
-                    </Link>
-
-                    <Link
-                      className="h-12  justify-center text-3xl font-bold text-complement1 "
-                      href="/portifolios"
-                    >
-                      Produtos
-                    </Link>
-                  </FadeIn>
-                </div>
+                  <Link
+                    className="h-12 justify-center text-3xl font-bold text-complement1 "
+                    href="/portifolios"
+                  >
+                    Produtos
+                  </Link>
+                </FadeIn>
+              </div>
             </motion.div>
           )}
         </nav>
-        <Button text={"Contato"} borderColorHover={"primary md:flex hidden"} />
+        <Button
+          text="Contato"
+          borderColorHover="primary"
+          style="md:flex hidden rounded-full"
+          type="submit"
+          href="/contact"
+        />
       </header>
-      <Banner />
     </>
   );
 }
