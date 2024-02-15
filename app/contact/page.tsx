@@ -1,6 +1,6 @@
 // pages/contact.tsx
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../layouts/header";
 import Button from "../../components/button";
 import { HiOutlineMail } from "react-icons/hi";
@@ -8,6 +8,13 @@ import { BsWhatsapp } from "react-icons/bs";
 
 export default function Contact() {
   const [nome, setNome] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Verificar se o dispositivo é móvel
+    const isMobileDevice = /Mobi/i.test(navigator.userAgent);
+    setIsMobile(isMobileDevice);
+  }, []);
 
   const handleNomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNome(e.target.value);
@@ -17,11 +24,21 @@ export default function Contact() {
     const numeroWhatsApp = "5511978612671";
     const mensagem = `Olá, meu nome é ${nome} gostaria de saber mais sobre a Mix!`;
 
-    const linkWhatsAppWeb = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-      mensagem
-    )}`;
+    let linkWhatsApp;
 
-    window.location.href = linkWhatsAppWeb;
+    if (isMobile) {
+      // Link de compartilhamento direto para dispositivos móveis
+      linkWhatsApp = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
+        mensagem
+      )}`;
+    } else {
+      // Link para WhatsApp Web para desktop
+      linkWhatsApp = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
+        mensagem
+      )}`;
+    }
+
+    window.location.href = linkWhatsApp;
   };
 
   return (
