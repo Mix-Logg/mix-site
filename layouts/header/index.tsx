@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import  BrandSvg from "../../assets/svg/logo.svg";
+import BrandSvg from "../../assets/svg/logo.svg";
 import Button from "../../components/button/index";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -123,7 +123,6 @@ export default function Header() {
                   >
                     Contato
                   </Link>
-                  
                 </FadeIn>
               </div>
             </motion.div>

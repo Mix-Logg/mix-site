@@ -1,4 +1,3 @@
-// pages/contact.tsx
 "use client";
 import React from "react";
 import Header from "../../layouts/header";

@@ -16,17 +16,16 @@ export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
           />
           <div className="absolute inset-0 rounded-3xl bg-terciary opacity-80"></div>
         </div>
-        
-        <div className="hidden absolute inset-0 md:flex items-center justify-center gap-96 text-white p-0">
-          <p className="flex items-center text-center font-extrabold text-primary text-5xl">
+
+        <div className="absolute inset-0 hidden items-center justify-center gap-96 p-0 text-white md:flex">
+          <p className="flex items-center text-center text-5xl font-extrabold text-primary">
             {title}
           </p>
           <p className="w-72 text-sm font-normal">{paragraph}</p>
         </div>
 
-
-        <div className="md:hidden absolute inset-0 flex flex-col items-start px-10 justify-center gap-6 p-4 text-white">
-          <p className="flex items-center text-center font-extrabold text-primary md:text-5xl text-3xl">
+        <div className="absolute inset-0 flex flex-col items-start justify-center gap-6 p-4 px-10 text-white md:hidden">
+          <p className="flex items-center text-center text-3xl font-extrabold text-primary md:text-5xl">
             {title}
           </p>
           <p className="w-72 text-xs font-normal">{paragraph}</p>

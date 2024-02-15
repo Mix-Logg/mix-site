@@ -44,22 +44,24 @@ const NotFoundPage: React.FC = () => {
       <Header />
       <FadeIn>
         <div className="mt-40 flex flex-col items-center justify-center">
-        <Image
+          <Image
             src={Truck}
             alt="truck"
             width={100}
             height={120}
-            className="transition duration-300 md:hidden ease-in-out hover:opacity-80"
+            className="transition duration-300 ease-in-out hover:opacity-80 md:hidden"
           />
           <Image
             src={Truck}
             alt="truck"
             width={150}
             height={100}
-            className="transition duration-300 hidden md:flex ease-in-out hover:opacity-80"
+            className="hidden transition duration-300 ease-in-out hover:opacity-80 md:flex"
           />
-          <h1 className="mb-4 text-4xl md:text-6xl font-extrabold text-primary">404 </h1>
-          <p className="font-extrabol mb-8 text-lg md:text-4xl text-secondary">
+          <h1 className="mb-4 text-4xl font-extrabold text-primary md:text-6xl">
+            404{" "}
+          </h1>
+          <p className="font-extrabol mb-8 text-lg text-secondary md:text-4xl">
             Em breve esta página estará disponível!
           </p>
           <Link href="/">

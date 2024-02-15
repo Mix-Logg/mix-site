@@ -1,4 +1,3 @@
-// pages/contact.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Header from "../../layouts/header";
@@ -11,7 +10,6 @@ export default function Contact() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Verificar se o dispositivo é móvel
     const isMobileDevice = /Mobi/i.test(navigator.userAgent);
     setIsMobile(isMobileDevice);
   }, []);
@@ -27,12 +25,10 @@ export default function Contact() {
     let linkWhatsApp;
 
     if (isMobile) {
-      // Link de compartilhamento direto para dispositivos móveis
       linkWhatsApp = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
         mensagem
       )}`;
     } else {
-      // Link para WhatsApp Web para desktop
       linkWhatsApp = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
         mensagem
       )}`;
