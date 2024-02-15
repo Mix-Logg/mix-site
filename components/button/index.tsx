@@ -1,15 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-interface ButtonProps {
-  text: string;
-  borderColorHover: string;
-  style: string;
-  onClick?: () => void;
-  href?: string;
-  type?: "button" | "submit";
-}
-
 export default function Button({
   text,
   borderColorHover,

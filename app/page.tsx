@@ -1,4 +1,4 @@
-import Banner from "../layouts/banner";
+import Banner from "../layouts/bannerHome";
 import Header from "../layouts/header";
 
 export const metadata = {

@@ -4,7 +4,6 @@ import Image from "next/image";
 import BrandSvg from "../../assets/svg/logo.svg";
 import Button from "../../components/button/index";
 import Link from "next/link";
-import Banner from "../banner";
 import { motion } from "framer-motion";
 import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
 import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
@@ -35,7 +34,7 @@ export default function Header() {
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
-                href="/sobre-nos"
+                href="/about-us"
               >
                 Sobre nós
               </Link>
@@ -99,33 +98,32 @@ export default function Header() {
                 <FadeIn className="flex flex-col">
                   <Link
                     className="h-12 justify-center text-3xl font-bold text-complement1 "
-                    href="/sobre-nos"
+                    href="/about-us"
                   >
                     Sobre nós
                   </Link>
 
                   <Link
                     className="h-12  justify-center text-3xl font-bold text-complement1 "
-                    href="/processos"
+                    href="/entregas"
                   >
                     Entregadores
                   </Link>
 
                   <Link
                     className="h-12  justify-center text-3xl font-bold text-complement1 "
-                    href="/portifolios"
+                    href="/serviços"
                   >
-                    Produtos
+                    Serviços
                   </Link>
-                  <div className="flex items-center h-12 ">
-                    
-                  <Button
-                    text="Contato"
-                    borderColorHover="primary"
-                    style="md:hidden rounded-full"
-                    type="submit"
-                    href="/contact"
-                  />
+                  <div className="flex h-12 items-center ">
+                    <Button
+                      text="Contato"
+                      borderColorHover="primary"
+                      style="md:hidden rounded-full"
+                      type="submit"
+                      href="/contact"
+                    />
                   </div>
                 </FadeIn>
               </div>

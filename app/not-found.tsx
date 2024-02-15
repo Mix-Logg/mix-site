@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "../layouts/header";
 import Image from "next/image";
-import Truck from "../assets/image/truck.gif";
+import Truck from "../assets/videos/truck.gif";
 import { FadeIn, FadeInStagger } from "../components/animations/fadeIn";
 
 export const metadata = {
