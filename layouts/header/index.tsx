@@ -16,13 +16,10 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
   return (
     <>
       <header className="relative flex items-center justify-between gap-x-10 px-5 py-2 md:px-40">
-      <div className="hidden md:flex">
+        <div className="hidden md:flex">
           <Link href={`/`}>
             <Image
               src={BrandSvg}
@@ -62,12 +59,14 @@ export default function Header() {
           </ul>
 
           <div className="flex items-center gap-56 md:hidden">
-            <Image
-              src={BrandSvg}
-              alt="Logo life sound"
-              width={50}
-              height={20}
-            />
+            <Link href={`/`}>
+              <Image
+                src={BrandSvg}
+                alt="Logo Mixservlog"
+                width={50}
+                height={20}
+              />
+            </Link>
             {!isMenuOpen && (
               <Floating
                 className={"absolute right-0 mr-6 cursor-pointer text-terciary"}
@@ -85,41 +84,51 @@ export default function Header() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-                <div className="flex w-full justify-end p-10">
-                  <Floating
-                    className={
-                      "absolute right-0 mr-6 cursor-pointer text-primary"
-                    }
-                    onClick={toggleMenu}
+              <div className="flex w-full justify-end p-10">
+                <Floating
+                  className={
+                    "absolute right-0 mr-6 cursor-pointer text-primary"
+                  }
+                  onClick={toggleMenu}
+                >
+                  <HiMiniXMark className="h-8 w-8" />
+                </Floating>
+              </div>
+
+              <div className="flex flex-col items-center p-4 text-left">
+                <FadeIn className="flex flex-col">
+                  <Link
+                    className="h-12 justify-center text-3xl font-bold text-complement1 "
+                    href="/sobre-nos"
                   >
-                    <HiMiniXMark className="h-8 w-8" />
-                  </Floating>
-                </div>
+                    Sobre nós
+                  </Link>
 
-                <div className="flex flex-col items-center p-4 text-left">
-                  <FadeIn className="flex flex-col">
-                    <Link
-                      className="h-12 justify-center text-3xl font-bold text-complement1 "
-                      href="/sobre-nos"
-                    >
-                      Sobre nós
-                    </Link>
+                  <Link
+                    className="h-12  justify-center text-3xl font-bold text-complement1 "
+                    href="/processos"
+                  >
+                    Entregadores
+                  </Link>
 
-                    <Link
-                      className="h-12  justify-center text-3xl font-bold text-complement1 "
-                      href="/processos"
-                    >
-                      Entregadores
-                    </Link>
-
-                    <Link
-                      className="h-12  justify-center text-3xl font-bold text-complement1 "
-                      href="/portifolios"
-                    >
-                      Produtos
-                    </Link>
-                  </FadeIn>
-                </div>
+                  <Link
+                    className="h-12  justify-center text-3xl font-bold text-complement1 "
+                    href="/portifolios"
+                  >
+                    Produtos
+                  </Link>
+                  <div className="flex items-center h-12 ">
+                    
+                  <Button
+                    text="Contato"
+                    borderColorHover="primary"
+                    style="md:hidden rounded-full"
+                    type="submit"
+                    href="/contact"
+                  />
+                  </div>
+                </FadeIn>
+              </div>
             </motion.div>
           )}
         </nav>
