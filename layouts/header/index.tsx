@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import BrandSvg from "../../assets/svg/logo.svg";
+import  BrandSvg from "../../assets/svg/logo.svg";
 import Button from "../../components/button/index";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -78,7 +78,7 @@ export default function Header() {
 
           {isMenuOpen && (
             <motion.div
-              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-80"
+              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-95"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -116,15 +116,14 @@ export default function Header() {
                   >
                     Serviços
                   </Link>
-                  <div className="flex h-12 items-center ">
-                    <Button
-                      text="Contato"
-                      borderColorHover="primary"
-                      style="md:hidden rounded-full"
-                      type="submit"
-                      href="/contact"
-                    />
-                  </div>
+
+                  <Link
+                    className="h-12  justify-center text-3xl font-bold text-complement1 "
+                    href="/contact"
+                  >
+                    Contato
+                  </Link>
+                  
                 </FadeIn>
               </div>
             </motion.div>
