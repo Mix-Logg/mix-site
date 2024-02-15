@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -21,7 +22,7 @@ const Banner = () => {
 
   return (
     <FadeIn>
-    <div className="md:flex items-center justify-center gap-36 py-10">
+    <div className="md:flex  items-center justify-center gap-36 py-10">
       <div className="flex flex-col px-7 items-start ">
         <p className="md:text-base text-sm font-medium text-secondary">
           Entregamos Soluções Logísticas Eficientes

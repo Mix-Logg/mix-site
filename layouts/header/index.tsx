@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import BrandSvg from "../../assets/svg/logo.svg";
@@ -21,8 +22,16 @@ export default function Header() {
   return (
     <>
       <header className="relative flex items-center justify-between gap-x-10 px-5 py-2 md:px-40">
-        <div className="hidden md:flex">
-          <Image src={BrandSvg} alt="Logo life sound" width={70} height={30} />
+      <div className="hidden md:flex">
+          <Link href={`/`}>
+            <Image
+              src={BrandSvg}
+              alt="Logo Mixservlog"
+              width={70}
+              height={30}
+              className="transition duration-300 ease-in-out hover:opacity-80"
+            />
+          </Link>
         </div>
         <nav className="flex items-center text-sm font-bold">
           <ul className="hidden items-center justify-center gap-x-5 md:flex">
@@ -37,7 +46,7 @@ export default function Header() {
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
-                href="/processos"
+                href="/entregadores"
               >
                 Entregadores
               </Link>
@@ -45,9 +54,9 @@ export default function Header() {
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
-                href="/portifolios"
+                href="/servicos"
               >
-                Produtos
+                Serviços
               </Link>
             </li>
           </ul>
@@ -114,9 +123,14 @@ export default function Header() {
             </motion.div>
           )}
         </nav>
-        <Button text={"Contato"} borderColorHover={"primary md:flex hidden"} />
+        <Button
+          text="Contato"
+          borderColorHover="primary"
+          style="md:flex hidden rounded-full"
+          type="submit"
+          href="/contact"
+        />
       </header>
-      <Banner />
     </>
   );
 }
