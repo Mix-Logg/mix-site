@@ -43,26 +43,31 @@ const NotFoundPage: React.FC = () => {
     <>
       <Header />
       <FadeIn>
-
-
-      <div className="flex mt-40 flex-col items-center justify-center">
+        <div className="mt-40 flex flex-col items-center justify-center">
         <Image
-          src={Truck}
-          alt="truck"
-          width={150}
-          height={100}
-          className="transition duration-300 ease-in-out hover:opacity-80"
-        />
-        <h1 className="mb-4 text-6xl font-extrabold text-primary">404 </h1>
-        <p className="mb-8 text-4xl font-extrabol text-secondary">
-        Em breve esta página estará disponível!
-        </p>
-        <Link href="/">
-          <p className="text-primary hover:underline">
-            Voltar para a página inicial
+            src={Truck}
+            alt="truck"
+            width={100}
+            height={120}
+            className="transition duration-300 md:hidden ease-in-out hover:opacity-80"
+          />
+          <Image
+            src={Truck}
+            alt="truck"
+            width={150}
+            height={100}
+            className="transition duration-300 hidden md:flex ease-in-out hover:opacity-80"
+          />
+          <h1 className="mb-4 text-4xl md:text-6xl font-extrabold text-primary">404 </h1>
+          <p className="font-extrabol mb-8 text-lg md:text-4xl text-secondary">
+            Em breve esta página estará disponível!
           </p>
-        </Link>
-      </div>
+          <Link href="/">
+            <p className="text-primary hover:underline">
+              Voltar para a página inicial
+            </p>
+          </Link>
+        </div>
       </FadeIn>
     </>
   );
