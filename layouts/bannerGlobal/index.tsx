@@ -7,7 +7,7 @@ import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
 export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
   return (
     <FadeIn>
-      <div className="relative m-2 rounded-3xl bg-complement1 p-4 md:p-10">
+      <div className="relative rounded-3xl bg-complement1">
         <div className="relative flex-grow">
           <Image
             src={Multicultural}
@@ -17,18 +17,13 @@ export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
           <div className="absolute inset-0 rounded-3xl bg-terciary opacity-80"></div>
         </div>
 
-        <div className="absolute inset-0 hidden items-center justify-center gap-96 p-0 text-white md:flex">
-          <p className="flex items-center text-center text-5xl font-extrabold text-primary">
+        <div className="absolute inset-0 items-center justify-center px-4 py-11 text-white md:flex md:gap-96 md:p-0">
+          <p className="flex items-center text-center text-4xl font-extrabold text-primary md:text-5xl">
             {title}
           </p>
-          <p className="w-72 text-sm font-normal">{paragraph}</p>
-        </div>
-
-        <div className="absolute inset-0 flex flex-col items-start justify-center gap-6 p-4 px-10 text-white md:hidden">
-          <p className="flex items-center text-center text-3xl font-extrabold text-primary md:text-5xl">
-            {title}
+          <p className="mt-4 w-72 text-xs font-normal md:mt-0 md:text-sm">
+            {paragraph}
           </p>
-          <p className="w-72 text-xs font-normal">{paragraph}</p>
         </div>
       </div>
     </FadeIn>
