@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import BrandSvg from "../../assets/svg/logo.svg";
+import BrandSvg from "../../assets/svg/logoPrimary.svg";
 import Button from "../../components/button/index";
 import Link from "next/link";
 import { motion } from "framer-motion";

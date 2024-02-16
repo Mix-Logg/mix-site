@@ -4,6 +4,7 @@ import BannerGlobal from "../../layouts/bannerGlobal";
 import Wrapper from "../../layouts/wrapper";
 import Topics from "../../components/topics";
 import Head from "next/head";
+import Footer from "../../layouts/footer";
 
 export default function Aboutus() {
   return (
@@ -38,7 +39,25 @@ export default function Aboutus() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
         </div>
+        <div className="justify-center gap-20 md:flex">
+          <Topics
+            title="Missão"
+            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          />
+          <Topics
+            title="Visão"
+            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          />
+          <Topics
+            title="Valores"
+            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          />
+        </div>
       </Wrapper>
+      <Footer/>
     </>
   );
 }
