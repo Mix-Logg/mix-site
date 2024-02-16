@@ -39,25 +39,8 @@ export default function Aboutus() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
         </div>
-        <div className="justify-center gap-20 md:flex">
-          <Topics
-            title="Missão"
-            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-          <Topics
-            title="Visão"
-            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-          <Topics
-            title="Valores"
-            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </div>
       </Wrapper>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
