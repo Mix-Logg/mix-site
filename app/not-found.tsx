@@ -3,40 +3,12 @@ import Header from "../layouts/header";
 import Image from "next/image";
 import Truck from "../assets/videos/truck.gif";
 import { FadeIn, FadeInStagger } from "../components/animations/fadeIn";
-
-export const metadata = {
-  title: "Mixservlog | Not-found",
-  description: "",
-  openGraph: {
-    title: "Mixservlog | Not-found",
-    description: "",
-    url: "",
-    siteName: "",
-    images: [
-      {
-        url: "",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "",
-        width: 1800,
-        height: 1600,
-        alt: "banner full desktop",
-      },
-    ],
-    locale: "pt_BR",
-    type: "website",
-  },
-  icons: {
-    icon: "/favicon.svg",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
-};
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Not Found | Mixservlog',
+  description: 'This page is about 404 error not found page',
+}
 
 const NotFoundPage: React.FC = () => {
   return (

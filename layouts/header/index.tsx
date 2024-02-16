@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import BrandSvg from "../../assets/svg/logo.svg";
 import Button from "../../components/button/index";
@@ -8,16 +8,39 @@ import { motion } from "framer-motion";
 import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
 import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
 import Floating from "../../components/animations/floating";
+import ProgressBar from "../../components/progressBar";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const isScrolled = scrollTop > 0;
+      setIsScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <header className="relative flex items-center justify-between gap-x-10 px-5 py-2 md:px-40">
+      <header
+        className={`${
+          isScrolled
+            ? "fixed top-0 z-50 flex w-full items-center justify-between bg-complement1 px-5 py-2 shadow-xl transition-all duration-300 md:px-40"
+            : "relative flex items-center justify-between px-5 py-2 md:px-40"
+        } ${isMenuOpen ? "h-screen overflow-hidden" : "flex items-center "}`}
+      >
+        <ProgressBar/>
         <div className="hidden md:flex">
           <Link href={`/`}>
             <Image

@@ -1,13 +1,17 @@
-"use client";
 import React from "react";
 import Header from "../../layouts/header";
 import BannerGlobal from "../../layouts/bannerGlobal";
 import Wrapper from "../../layouts/wrapper";
 import Topics from "../../components/topics";
+import Head from "next/head";
 
 export default function Aboutus() {
   return (
     <>
+      <Head>
+        <title>Sobre nós | Mixservlog</title>
+        <meta name="description" content="This page is about our company" />
+      </Head>
       <Header />
       <Wrapper>
         <BannerGlobal

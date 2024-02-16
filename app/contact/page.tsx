@@ -4,6 +4,7 @@ import Header from "../../layouts/header";
 import Button from "../../components/button";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";
+import Head from 'next/head';
 
 export default function Contact() {
   const [nome, setNome] = useState("");
@@ -39,8 +40,11 @@ export default function Contact() {
 
   return (
     <>
+      <Head>
+        <title>Contato | Mixservlog</title>
+        <meta name="description" content="This page is about contact our company" />
+      </Head>
       <Header />
-
       <div className="item-center mt-10 flex flex-col gap-8">
         <div className="mb-2 flex flex-col items-center justify-center">
           <h1 className=" text-3xl font-extrabold text-primary md:text-4xl">
