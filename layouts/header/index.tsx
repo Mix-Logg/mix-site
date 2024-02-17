@@ -153,8 +153,7 @@ export default function Header() {
         </nav>
         <Button
           text="Contato"
-          borderColorHover="primary"
-          style="md:flex hidden rounded-full"
+          className="md:flex hidden "
           type="submit"
           href="/contact"
         />

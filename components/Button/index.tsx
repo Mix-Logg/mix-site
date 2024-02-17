@@ -3,11 +3,10 @@ import Link from "next/link";
 
 export default function Button({
   text,
-  borderColorHover,
   onClick,
-  style,
   href,
   type = "button",
+  className, 
 }: ButtonProps) {
   if (href) {
     return (
@@ -15,7 +14,7 @@ export default function Button({
         <button
           type={type} 
           onClick={onClick}
-          className={`${style} border border-primary transition duration-300 ease-in-out border-${borderColorHover} cursor-pointer px-4 py-2 font-bold text-primary hover:bg-primary hover:bg-none hover:text-complement1`}
+          className={`rounded-full border border-primary transition duration-300 ease-in-out  cursor-pointer px-4 py-2 font-bold text-primary hover:bg-primary hover:bg-none hover:text-complement1 ${className}`}
         >
           {text}
         </button>
@@ -27,7 +26,7 @@ export default function Button({
     <button
       type={type} 
       onClick={onClick}
-      className={`${style} border border-primary transition duration-300 ease-in-out border-${borderColorHover} cursor-pointer px-4 py-2 font-bold text-primary hover:bg-primary hover:bg-none hover:text-complement1`}
+      className={`rounded-full border border-primary transition duration-300 ease-in-out cursor-pointer px-4 py-2 font-bold text-primary hover:bg-primary hover:bg-none hover:text-complement1 ${className}`}
     >
       {text}
     </button>

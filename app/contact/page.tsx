@@ -85,8 +85,7 @@ export default function Contact() {
             />
             <Button
               text="Enviar"
-              style="rounded-lg"
-              borderColorHover="primary"
+              className="rounded-lg"
               onClick={enviarMensagemWhatsApp}
             />
           </div>
