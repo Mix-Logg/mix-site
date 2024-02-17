@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Header from "../../layouts/header";
-import Button from "../../components/button";
+import Button from "../../components/Button";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";
 import Head from 'next/head';
