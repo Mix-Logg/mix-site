@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../layouts/header";
 import BannerGlobal from "../../layouts/bannerGlobal";
 import Wrapper from "../../layouts/wrapper";
-import Topics from "../../components/topics";
+import Topics from "../../components/Topics";
 import Head from "next/head";
 import Footer from "../../layouts/footer";
 

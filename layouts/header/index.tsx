@@ -2,13 +2,13 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import BrandSvg from "../../assets/svg/logoPrimary.svg";
-import Button from "../../components/button/index";
+import Button from "../../components/Button/index";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
-import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
-import Floating from "../../components/animations/floating";
-import ProgressBar from "../../components/progressBar";
+import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
+import Floating from "../../components/Animations/Floating";
+import ProgressBar from "../../components/ProgressBar";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

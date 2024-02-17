@@ -6,7 +6,7 @@ import {
   HiOutlineHeart,
   HiOutlineExclamation,
 } from "react-icons/hi";
-import { FadeIn, FadeInStagger } from "../animations/fadeIn";
+import { FadeIn, FadeInStagger } from "../Animations/FadeIn";
 export default function Topics({ title, paragraph }: TopicsProps) {
   let icon,
     invalidTitle = false;

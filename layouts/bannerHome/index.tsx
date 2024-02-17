@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Cars from "../../assets/svg/cars.svg";
-import { FadeIn, FadeInStagger } from "../../components/animations/fadeIn";
+import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
 
 const Banner = () => {
   const [titulo, setTitulo] = useState("Histórias");
