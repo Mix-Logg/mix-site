@@ -12,90 +12,118 @@ import {
 export default function Footer() {
   return (
     <>
-      <div className="flex p-3 justify-center items-center">
-        <Image src={BrandSvg} alt="Logo Mixservlog" className="h-20" />
+      <div className="items-center   justify-center p-3 md:flex">
+        <Image src={BrandSvg} alt="Logo Mixservlog" className="h-14 md:h-20 hidden md:flex" />
 
-        <div className="flex gap-2">
-          <div className="p-4">
-            <p className="mb-3 w-32 text-center font-semibold text-terciary">Políticas</p>
-            <ul className="flex flex-col items-center justify-center gap-2">
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-            </ul>
+        <div className="gap-2  md:flex">
+          <div className="  flex md:flex">
+            <div className="p-4">
+              <p className="mb-3 w-32 text-center font-semibold text-terciary">
+                Políticas
+              </p>
+              <ul className="flex flex-col items-center justify-center gap-2">
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+              </ul>
+            </div>
+            <div className="p-4">
+              <p className="mb-3 w-32 text-center font-semibold text-terciary">
+                Comunidade
+              </p>
+              <ul className="flex flex-col items-center justify-center gap-2">
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="p-4">
-            <p className="mb-3 w-32 text-center font-semibold text-terciary">Comunidade</p>
-            <ul className="flex flex-col items-center justify-center gap-2">
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-            </ul>
-          </div>
-          <div className="p-4">
-            <p className="mb-3 w-32 text-center font-semibold text-terciary">Company</p>
-            <ul className="flex flex-col items-center justify-center gap-2">
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-              <li className="w-20 text-center font-normal text-secondary">
-                Label
-              </li>
-            </ul>
-          </div>
-          <div className="p-4">
-            <p className="mb-3 w-32 text-left font-semibold text-terciary">Redes sociais</p>
-            <ul className="flex  items-start justify-start gap-2 px-1">
-              <Link href="/" className="bg-terciary hover:bg-primary transition duration-300 ease-in-out p-2 rounded-full">
-                <FaFacebookF className="h-6 w-6 text-complement1" />
-              </Link>
-              <Link href="/" className="bg-terciary hover:bg-primary transition duration-300 ease-in-out p-2 rounded-full">
-                <FaInstagram className="h-6 w-6  text-complement1" />
-              </Link>
-              <Link href="/" className="bg-terciary hover:bg-primary transition duration-300 ease-in-out p-2 rounded-full">
-                <FaWhatsapp className="h-6 w-6  text-complement1" />
-              </Link>
-              <Link href="/" className="bg-terciary hover:bg-primary transition duration-300 ease-in-out p-2 rounded-full">
-                <FaLinkedinIn className="h-6 w-6  text-complement1" />
-              </Link>
-            </ul>
+          <div className="flex">
+            <div className="p-4">
+              <p className="mb-3 w-32 text-center font-semibold text-terciary">
+                Company
+              </p>
+              <ul className="flex flex-col items-center justify-center gap-2">
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+                <li className="w-20 text-center font-normal text-secondary">
+                  Label
+                </li>
+              </ul>
+            </div>
+            <div className="p-4">
+              <p className="mb-3 w-32 text-left font-semibold text-terciary">
+                Redes sociais
+              </p>
+              <ul className="items-start  justify-start gap-2 px-1 md:flex">
+                <div className="flex gap-2 mb-2">
+                  <Link
+                    href="/"
+                    className="rounded-full  bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
+                  >
+                    <FaFacebookF className="h-5 w-5  text-complement1 md:h-6 md:w-6" />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/mixservlog/"
+                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
+                  >
+                    <FaInstagram className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
+                  </Link>
+                </div>
+                <div className="flex gap-2">
+                  <Link
+                    href="/"
+                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
+                  >
+                    <FaWhatsapp className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
+                  </Link>
+                  <Link
+                    href="/"
+                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
+                  >
+                    <FaLinkedinIn className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
+                  </Link>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-center bg-primary p-2 text-sm font-normal text-complement1">
+      <div className="flex w-full justify-center bg-primary p-2 text-xs font-normal text-complement1 md:text-sm">
         © 2024 Mixservlog. Todos os direitos reservados.
       </div>
     </>
