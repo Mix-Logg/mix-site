@@ -5,6 +5,9 @@ import {
   HiOutlineEye,
   HiOutlineHeart,
   HiOutlineExclamation,
+  HiOutlineWifi,
+  HiOutlineBadgeCheck,
+  HiOutlineLightBulb,
 } from "react-icons/hi";
 import { FadeIn, FadeInStagger } from "../Animations/FadeIn";
 export default function Topics({ title, paragraph }: TopicsProps) {
@@ -12,6 +15,19 @@ export default function Topics({ title, paragraph }: TopicsProps) {
     invalidTitle = false;
 
   switch (title) {
+    case "Inovação":
+      icon = (
+        <HiOutlineLightBulb className="h-6 w-6 text-primary md:h-8 md:w-8" />
+      );
+      break;
+    case "Efetividade":
+      icon = (
+        <HiOutlineBadgeCheck className="h-6 w-6 text-primary md:h-8 md:w-8" />
+      );
+      break;
+    case "Conexão":
+      icon = <HiOutlineWifi className="h-6 w-6 text-primary md:h-8 md:w-8" />;
+      break;
     case "Missão":
       icon = <HiOutlineFlag className="h-6 w-6 text-primary md:h-8 md:w-8" />;
       break;
@@ -34,14 +50,13 @@ export default function Topics({ title, paragraph }: TopicsProps) {
         <div className="flex flex-col gap-2">
           {icon}
           <p
-            className={`w-${
-              invalidTitle ? "60" : "20"
-            } text-base font-semibold text-secondary md:text-lg`}
+            className={`
+             text-base font-semibold text-secondary md:text-lg`}
           >
             {invalidTitle ? "Título inválido" : title}
           </p>
         </div>
-        <p className="w-80 text-sm font-normal text-secondary md:text-base">
+        <p className="text-left justify-left w-80 text-sm font-normal text-secondary md:text-base">
           {invalidTitle ? "Título inválido" : paragraph}
         </p>
       </div>

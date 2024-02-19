@@ -21,8 +21,8 @@ const Banner = () => {
   }, [titulo]);
 
   return (
-    <FadeIn>
-      <div className="items-center  justify-center gap-36 py-10 md:flex">
+    <FadeIn className="">
+      <div className="items-center mt-10 justify-center gap-36 py-10 md:flex">
         <div className="flex flex-col items-start px-7 ">
           <p className="text-sm font-medium text-secondary md:text-base">
             Entregamos Soluções Logísticas Eficientes

@@ -12,9 +12,14 @@ import {
 export default function Footer() {
   return (
     <>
-      <div className="items-center   justify-center p-3 md:flex">
-        <Image src={BrandSvg} alt="Logo Mixservlog" className="h-14 md:h-20 hidden md:flex" />
-
+      <div className="mt-10 items-center justify-center p-3 md:flex">
+        <Link href={`/`}>
+          <Image
+            src={BrandSvg}
+            alt="Logo Mixservlog"              
+            className="mr-4 hidden h-20 md:flex transition duration-300 ease-in-out hover:opacity-80"
+          />
+        </Link>
         <div className="gap-2  md:flex">
           <div className="  flex md:flex">
             <div className="p-4">
@@ -90,7 +95,7 @@ export default function Footer() {
                 Redes sociais
               </p>
               <ul className="items-start  justify-start gap-2 px-1 md:flex">
-                <div className="flex gap-2 mb-2">
+                <div className="mb-2 flex gap-2">
                   <Link
                     href="/"
                     className="rounded-full  bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"

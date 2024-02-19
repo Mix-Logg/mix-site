@@ -1,4 +1,4 @@
-interface TopicsProps {
+interface TitleProps {
     title: string;
-    paragraph: string;
+    subtitle: string;
   }

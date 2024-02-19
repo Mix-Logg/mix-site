@@ -1,5 +1,7 @@
 import Banner from "../layouts/bannerHome";
+import Footer from "../layouts/footer";
 import Header from "../layouts/header";
+import Wrapper from "../layouts/wrapper";
 
 export const metadata = {
   title: "Mixservlog",
@@ -39,7 +41,12 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Banner />
+      <Wrapper>
+        <div className="h-screen">
+          <Banner />
+        </div>
+      </Wrapper>
+      <Footer />
     </>
   );
 }
