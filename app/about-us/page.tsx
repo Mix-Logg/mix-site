@@ -40,7 +40,7 @@ export default function Aboutus() {
           />
         </div>
       </Wrapper>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }

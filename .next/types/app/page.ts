@@ -1,4 +1,4 @@
-// File: /home/matheus/Documents/mix-site/app/page.tsx
+// File: C:\Users\Mix - Matheus\Documents\mix-site\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

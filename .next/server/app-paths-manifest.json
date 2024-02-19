@@ -1,9 +1,4 @@
 {
   "/page": "app/page.js",
-<<<<<<< HEAD
-=======
-  "/contact/page": "app/contact/page.js",
-  "/not-found": "app/not-found.js",
->>>>>>> d201b51815da9a7f6b9d29de4f0eabdd0004a03d
   "/about-us/page": "app/about-us/page.js"
 }
