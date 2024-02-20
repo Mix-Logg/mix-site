@@ -74,9 +74,9 @@ export default function Header() {
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
-                href="/servicos"
+                href="/empresas"
               >
-                Serviços
+                Empresas
               </Link>
             </li>
           </ul>
@@ -102,7 +102,7 @@ export default function Header() {
 
           {isMenuOpen && (
             <motion.div
-              className="fixed left-0 top-0 z-20 h-full w-full bg-complement1 bg-opacity-95"
+              className="fixed left-0 top-0 z-20 h-full w-full bg-complement1 "
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -155,7 +155,7 @@ export default function Header() {
                   >
                     Contato
                   </Link>
-                  <div className="mt-4">
+                  <div className="py-8">
                     <SocialMedia type="" />
                   </div>
                 </FadeIn>
