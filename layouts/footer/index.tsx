@@ -9,37 +9,11 @@ import {
   FaWhatsapp,
   FaLinkedinIn,
 } from "react-icons/fa";
+import useMessageWhatsApp from "../../hooks/useMessageWhatsApp";
+import SocialMedia from "../../components/SocialMedia";
 export default function Footer() {
-  const [nome, setNome] = useState("");
-  const [isMobile, setIsMobile] = useState(false);
+  const { isMobile, enviarMensagemWhatsApp } = useMessageWhatsApp();
 
-  useEffect(() => {
-    const isMobileDevice = /Mobi/i.test(navigator.userAgent);
-    setIsMobile(isMobileDevice);
-  }, []);
-
-  const handleNomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNome(e.target.value);
-  };
-
-  const enviarMensagemWhatsApp = () => {
-    const numeroWhatsApp = "5511978612671";
-    const mensagem = `Olá, gostaria de saber mais sobre a Mix!`;
-
-    let linkWhatsApp;
-
-    if (isMobile) {
-      linkWhatsApp = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-        mensagem
-      )}`;
-    } else {
-      linkWhatsApp = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-        mensagem
-      )}`;
-    }
-
-    window.location.href = linkWhatsApp;
-  };
   return (
     <>
       <div className="mt-10 flex items-center justify-center  md:p-3 ">
@@ -169,36 +143,8 @@ export default function Footer() {
               <p className="mb-3 w-32 text-left font-semibold text-terciary">
                 Redes sociais
               </p>
-              <ul className="items-start  justify-start gap-2 px-1 md:flex">
-                <div className="mb-2 flex gap-2">
-                  <Link
-                    href="/"
-                    className="rounded-full  bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
-                  >
-                    <FaFacebookF className="h-5 w-5  text-complement1 md:h-6 md:w-6" />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/mixservlog/"
-                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
-                  >
-                    <FaInstagram className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
-                  </Link>
-                </div>
-                <div className="flex gap-2">
-                  <p
-                    onClick={enviarMensagemWhatsApp}
-                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out cursor-pointer hover:bg-primary"
-                  >
-                    <FaWhatsapp className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
-                  </p>
-                  <Link
-                    href="/"
-                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
-                  >
-                    <FaLinkedinIn className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
-                  </Link>
-                </div>
-              </ul>
+             <SocialMedia/>
+             
             </div>
           </div>
         </div>

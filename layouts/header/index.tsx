@@ -9,6 +9,7 @@ import { HiBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
 import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
 import Floating from "../../components/Animations/Floating";
 import ProgressBar from "../../components/ProgressBar";
+import SocialMedia from "../../components/SocialMedia";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ export default function Header() {
             : "relative flex items-center justify-between px-5 py-2 md:px-40"
         } ${isMenuOpen ? "h-screen overflow-hidden" : "flex items-center "}`}
       >
-        <ProgressBar/>
+        <ProgressBar />
         <div className="hidden md:flex">
           <Link href={`/`}>
             <Image
@@ -101,15 +102,23 @@ export default function Header() {
 
           {isMenuOpen && (
             <motion.div
-              className="fixed left-0 top-0 z-20 h-full w-full bg-black bg-opacity-95"
+              className="fixed left-0 top-0 z-20 h-full w-full bg-complement1 bg-opacity-95"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex w-full justify-end p-10">
+              <div className="flex justify-between p-6">
+                <Link href={`/`}>
+                  <Image
+                    src={BrandSvg}
+                    alt="Logo Mixservlog"
+                    width={50}
+                    height={20}
+                  />
+                </Link>
                 <Floating
                   className={
-                    "absolute right-0 mr-6 cursor-pointer text-primary"
+                    "items-center flex cursor-pointer text-primary"
                   }
                   onClick={toggleMenu}
                 >
@@ -118,34 +127,37 @@ export default function Header() {
               </div>
 
               <div className="flex flex-col items-center p-4 text-left">
-                <FadeIn className="flex flex-col">
+                <FadeIn className="flex w-full flex-col">
                   <Link
-                    className="h-12 justify-center text-3xl font-bold text-complement1 "
+                    className="justify-center border-b-2 border-neutral-200 py-2 text-2xl font-semibold text-terciary "
                     href="/about-us"
                   >
                     Sobre nós
                   </Link>
 
                   <Link
-                    className="h-12  justify-center text-3xl font-bold text-complement1 "
+                    className="justify-center border-b-2 border-neutral-200 py-2  text-2xl font-semibold text-terciary "
                     href="/entregas"
                   >
                     Entregadores
                   </Link>
 
                   <Link
-                    className="h-12  justify-center text-3xl font-bold text-complement1 "
+                    className="justify-center border-b-2 border-neutral-200 py-2  text-2xl font-semibold text-terciary "
                     href="/empresas"
                   >
                     Empresas
                   </Link>
 
                   <Link
-                    className="h-12  justify-center text-3xl font-bold text-complement1 "
+                    className="justify-center border-b-2 border-neutral-200 py-2  text-2xl font-semibold text-terciary "
                     href="/contact"
                   >
                     Contato
                   </Link>
+                  <div className="mt-4">
+                    <SocialMedia />
+                  </div>
                 </FadeIn>
               </div>
             </motion.div>
@@ -153,7 +165,7 @@ export default function Header() {
         </nav>
         <Button
           text="Contato"
-          className="md:flex hidden "
+          className="hidden md:flex "
           type="submit"
           href="/contact"
         />
