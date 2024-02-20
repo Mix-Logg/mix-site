@@ -31,7 +31,7 @@ const NotFoundPage: React.FC = () => {
             className="hidden transition duration-300 ease-in-out hover:opacity-80 md:flex"
           />
           <h1 className="mb-4 text-4xl font-extrabold text-primary md:text-6xl">
-            404{" "}
+            404
           </h1>
           <p className="font-extrabol mb-8 text-lg text-secondary md:text-4xl">
             Em breve esta página estará disponível!

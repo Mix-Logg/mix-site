@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BrandSvg from "../../assets/svg/logoSecondary.svg";
@@ -10,14 +10,44 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 export default function Footer() {
+  const [nome, setNome] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobileDevice = /Mobi/i.test(navigator.userAgent);
+    setIsMobile(isMobileDevice);
+  }, []);
+
+  const handleNomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNome(e.target.value);
+  };
+
+  const enviarMensagemWhatsApp = () => {
+    const numeroWhatsApp = "5511978612671";
+    const mensagem = `Olá, gostaria de saber mais sobre a Mix!`;
+
+    let linkWhatsApp;
+
+    if (isMobile) {
+      linkWhatsApp = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
+        mensagem
+      )}`;
+    } else {
+      linkWhatsApp = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
+        mensagem
+      )}`;
+    }
+
+    window.location.href = linkWhatsApp;
+  };
   return (
     <>
-      <div className="mt-10 items-center justify-center md:p-3  flex ">
+      <div className="mt-10 flex items-center justify-center  md:p-3 ">
         <Link href={`/`}>
           <Image
             src={BrandSvg}
-            alt="Logo Mixservlog"              
-            className="mr-4 hidden h-20 md:flex transition duration-300 ease-in-out hover:opacity-80"
+            alt="Logo Mixservlog"
+            className="mr-4 hidden h-20 transition duration-300 ease-in-out hover:opacity-80 md:flex"
           />
         </Link>
         <div className="gap-2  md:flex">
@@ -27,21 +57,36 @@ export default function Footer() {
                 Políticas
               </p>
               <ul className="flex flex-col items-center justify-center gap-2">
-                <li className="w-20 text-center font-normal text-secondary">
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
+                </Link>
               </ul>
             </div>
             <div className="p-4">
@@ -49,21 +94,36 @@ export default function Footer() {
                 Comunidade
               </p>
               <ul className="flex flex-col items-center justify-center gap-2">
-                <li className="w-20 text-center font-normal text-secondary">
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
+                </Link>
               </ul>
             </div>
           </div>
@@ -73,21 +133,36 @@ export default function Footer() {
                 Company
               </p>
               <ul className="flex flex-col items-center justify-center gap-2">
-                <li className="w-20 text-center font-normal text-secondary">
+                <Link
+                  href={`/about-us`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
+                  Sobre nós
+                </Link>
+                <Link
+                  href={`/about-us#cultura-mix`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
+                  Cultura Mix
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
+                </Link>
+                <Link
+                  href={`/`}
+                  className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
+                >
                   Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
-                  Label
-                </li>
-                <li className="w-20 text-center font-normal text-secondary">
-                  Label
-                </li>
+                </Link>
               </ul>
             </div>
             <div className="p-4">
@@ -110,12 +185,12 @@ export default function Footer() {
                   </Link>
                 </div>
                 <div className="flex gap-2">
-                  <Link
-                    href="/"
-                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
+                  <p
+                    onClick={enviarMensagemWhatsApp}
+                    className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out cursor-pointer hover:bg-primary"
                   >
                     <FaWhatsapp className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
-                  </Link>
+                  </p>
                   <Link
                     href="/"
                     className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"

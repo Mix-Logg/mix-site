@@ -18,7 +18,7 @@ export default function Aboutus() {
           paragraph="a MIX Serviços Logísticos posiciona-se como uma força impulsionadora na transformação positiva do setor logístico brasileiro. Sua visão de criar uma comunidade de parceiros interligados destaca o comprometimento da empresa em promover uma logística eficiente, inteligente e orientada para o futuro."
         />
         <div className="items-center justify-center gap-14 px-2 py-8 md:flex">
-          <p className="text-sm font-normal text-secondary text-justify md:w-1/3 md:text-base">
+          <p className="text-justify text-sm font-normal text-secondary md:w-1/3 md:text-base">
             A <span className="font-bold">MIX Serviços Logísticos</span> é uma
             empresa brasileira dedicada a estabelecer uma sólida rede de
             parcerias por meio da interação, desenvolvimento e fortalecimento
@@ -41,21 +41,30 @@ export default function Aboutus() {
             className="mx-auto mt-4 w-72 md:mx-0 md:mt-0 md:w-2/5"
           />
         </div>
-        <Title title="Cultura Mix" subtitle="Estamos com você" />
-        <div className="justify-center gap-20 md:flex">
-          <Topics
-            title="Conexão"
-            paragraph="Cultivar uma boa relação é essencial para prosperidade, buscamos desenvolver uma Conexão de confiança através de atitudes éticas, ações de servir, fazer organizado e entregar com qualidade. "
-          />
-          <Topics
-            title="Efetividade"
-            paragraph="Buscamos sempre obter os melhores índices de Efetividade operacional, objetivos primordiais para otimizar os resultados de forma a atender o nível de serviço estabelecido, garantindo a satisfação dos nossos clientes. "
-          />
-          <Topics
-            title="Inovação"
-            paragraph="Acreditamos que a Inovação é o caminho para melhoria continua dos  nossos processos e soluções de problemas, pilares fundamentais para o crescimento, desenvolvimento e fortalecimento dos nossos serviços de entregas. "
-          />
-        </div>
+        <section id="cultura-mix">
+          <Title title="Cultura Mix" subtitle="Estamos com você" />
+          <div className="justify-center gap-20 md:flex">
+            <Topics
+              title="Conexão"
+              paragraph="Cultivar uma boa relação é essencial para prosperidade, buscamos desenvolver uma Conexão de confiança através de atitudes éticas, ações de servir, fazer organizado e entregar com qualidade. "
+            />
+            <Topics
+              title="Efetividade"
+              paragraph="Buscamos sempre obter os melhores índices de Efetividade operacional, objetivos primordiais para otimizar os resultados de forma a atender o nível de serviço estabelecido, garantindo a satisfação dos nossos clientes. "
+            />
+            <Topics
+              title="Inovação"
+              paragraph="Acreditamos que a Inovação é o caminho para melhoria continua dos  nossos processos e soluções de problemas, pilares fundamentais para o crescimento, desenvolvimento e fortalecimento dos nossos serviços de entregas. "
+            />
+          </div>
+        </section>
+
+        {/* <div className="flex flex-col items-center justify-center gap-2">
+            <h1 className="text-7xl font-bold text-primary">2 MILHÕES</h1>
+            <h2 className="ml-28 text-3xl font-normal text-primary">
+              de entregas por todo Brasil
+            </h2>
+          </div> */}
       </Wrapper>
       <Footer />
     </>

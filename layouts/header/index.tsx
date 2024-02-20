@@ -135,9 +135,9 @@ export default function Header() {
 
                   <Link
                     className="h-12  justify-center text-3xl font-bold text-complement1 "
-                    href="/serviços"
+                    href="/empresas"
                   >
-                    Serviços
+                    Empresas
                   </Link>
 
                   <Link

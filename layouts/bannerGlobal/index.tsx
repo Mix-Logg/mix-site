@@ -21,7 +21,7 @@ export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
           <p className="flex items-center text-center text-4xl font-extrabold text-primary md:text-5xl">
             {title}
           </p>
-          <p className="mt-4 w-72 text-xs font-normal md:mt-0 md:text-sm">
+          <p className="mt-4 w-72 text-xs text-justify font-normal md:mt-0 md:text-sm">
             {paragraph}
           </p>
         </div>

@@ -21,7 +21,7 @@ export default function Contact() {
   };
 
   const enviarMensagemWhatsApp = () => {
-    const numeroWhatsApp = "5511978612671";
+    const numeroWhatsApp = process.env.NEXT_PUBLIC_NUMBER_MIX;
     const mensagem = `Olá, meu nome é ${nome} gostaria de saber mais sobre a Mix!`;
 
     let linkWhatsApp;
@@ -38,7 +38,7 @@ export default function Contact() {
 
     window.location.href = linkWhatsApp;
   };
-
+  const isNomeValido = nome.trim().length > 0 && /^[a-zA-Z]+$/.test(nome);
   return (
     <>
       <Header />
