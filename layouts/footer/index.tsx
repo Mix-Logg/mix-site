@@ -9,10 +9,8 @@ import {
   FaWhatsapp,
   FaLinkedinIn,
 } from "react-icons/fa";
-import useMessageWhatsApp from "../../hooks/useMessageWhatsApp";
 import SocialMedia from "../../components/SocialMedia";
 export default function Footer() {
-  const { isMobile, enviarMensagemWhatsApp } = useMessageWhatsApp();
 
   return (
     <>
@@ -143,7 +141,7 @@ export default function Footer() {
               <p className="mb-3 w-32 text-left font-semibold text-terciary">
                 Redes sociais
               </p>
-             <SocialMedia/>
+             <SocialMedia type="footer"/>
              
             </div>
           </div>

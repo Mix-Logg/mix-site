@@ -1,0 +1,3 @@
+interface SocialMediaProps {
+    type: string;
+  }

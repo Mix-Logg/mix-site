@@ -156,7 +156,7 @@ export default function Header() {
                     Contato
                   </Link>
                   <div className="mt-4">
-                    <SocialMedia />
+                    <SocialMedia type="" />
                   </div>
                 </FadeIn>
               </div>
