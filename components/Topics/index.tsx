@@ -56,7 +56,7 @@ export default function Topics({ title, paragraph }: TopicsProps) {
             {invalidTitle ? "Título inválido" : title}
           </p>
         </div>
-        <p className="text-left justify-left w-80 text-sm font-normal text-secondary md:text-base">
+        <p className="text-justify  w-80 text-sm font-normal text-secondary md:text-base">
           {invalidTitle ? "Título inválido" : paragraph}
         </p>
       </div>

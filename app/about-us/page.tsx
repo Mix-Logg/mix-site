@@ -18,7 +18,7 @@ export default function Aboutus() {
           paragraph="a MIX Serviços Logísticos posiciona-se como uma força impulsionadora na transformação positiva do setor logístico brasileiro. Sua visão de criar uma comunidade de parceiros interligados destaca o comprometimento da empresa em promover uma logística eficiente, inteligente e orientada para o futuro."
         />
         <div className="items-center justify-center gap-14 px-2 py-8 md:flex">
-          <p className="text-sm font-normal text-secondary md:w-1/3 md:text-base">
+          <p className="text-sm font-normal text-secondary text-justify md:w-1/3 md:text-base">
             A <span className="font-bold">MIX Serviços Logísticos</span> é uma
             empresa brasileira dedicada a estabelecer uma sólida rede de
             parcerias por meio da interação, desenvolvimento e fortalecimento

@@ -12,7 +12,7 @@ import {
 export default function Footer() {
   return (
     <>
-      <div className="mt-10 items-center justify-center p-3 md:flex">
+      <div className="mt-10 items-center justify-center md:p-3  flex ">
         <Link href={`/`}>
           <Image
             src={BrandSvg}
