@@ -10,6 +10,7 @@ import Footer from "../../layouts/footer";
 export default function Contact() {
   const [nome, setNome] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+  const [nomeErro, setNomeErro] = useState("");
 
   useEffect(() => {
     const isMobileDevice = /Mobi/i.test(navigator.userAgent);
@@ -18,6 +19,7 @@ export default function Contact() {
 
   const handleNomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNome(e.target.value);
+    setNomeErro("");
   };
 
   const enviarMensagemWhatsApp = () => {
@@ -25,7 +27,10 @@ export default function Contact() {
     const mensagem = `Olá, meu nome é ${nome} gostaria de saber mais sobre a Mix!`;
 
     let linkWhatsApp;
-
+    if (!isNomeValido) {
+      setNomeErro("Por favor, preencha o campo com seu nome!");
+      return;
+    }
     if (isMobile) {
       linkWhatsApp = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
         mensagem
@@ -87,10 +92,13 @@ export default function Contact() {
                 onClick={enviarMensagemWhatsApp}
               />
             </div>
+            {nomeErro && (
+              <p className="mt-2 text-sm text-red-400">{nomeErro}</p>
+            )}
           </div>
         </div>
       </Wrapper>
-      <Footer/>
+      <Footer />
     </>
   );
 }
