@@ -1,17 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BrandSvg from "../../assets/svg/logoSecondary.svg";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-  FaLinkedinIn,
-} from "react-icons/fa";
 import SocialMedia from "../../components/SocialMedia";
 export default function Footer() {
-
   return (
     <>
       <div className="mt-10 flex items-center justify-center  md:p-3 ">
@@ -30,10 +22,10 @@ export default function Footer() {
               </p>
               <ul className="flex flex-col items-center justify-center gap-2">
                 <Link
-                  href={`/`}
+                  href={`/about-us#cultura-mix`}
                   className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
-                  Label
+                  Cultura Mix
                 </Link>
                 <Link
                   href={`/`}
@@ -112,10 +104,10 @@ export default function Footer() {
                   Sobre nós
                 </Link>
                 <Link
-                  href={`/about-us#cultura-mix`}
+                  href={`/`}
                   className=" text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
-                  Cultura Mix
+                  Label{" "}
                 </Link>
                 <Link
                   href={`/`}
@@ -141,8 +133,7 @@ export default function Footer() {
               <p className="mb-3 w-32 text-left font-semibold text-terciary">
                 Redes sociais
               </p>
-             <SocialMedia type="footer"/>
-             
+              <SocialMedia type="footer" />
             </div>
           </div>
         </div>

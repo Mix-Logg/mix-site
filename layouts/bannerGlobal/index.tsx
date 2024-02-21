@@ -14,7 +14,7 @@ export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
             alt="Mix Multicultural"
             className="h-60 w-full rounded-3xl object-cover"
           />
-          <div className="absolute inset-0 rounded-3xl bg-terciary opacity-80"></div>
+          <div className="absolute inset-0 rounded-3xl bg-terciary opacity-50"></div>
         </div>
 
         <div className="absolute inset-0 items-center justify-center px-4 py-11 text-white md:flex md:gap-96 md:p-0">
