@@ -1,4 +1,4 @@
 interface TopicsProps {
-  title: string;
+  title?: string;
   paragraph: string;
 }

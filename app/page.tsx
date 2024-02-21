@@ -1,3 +1,4 @@
+import Faq from "../components/Faq";
 import Title from "../components/Title";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Banner from "../layouts/bannerHome";
@@ -52,24 +53,30 @@ export default function Home() {
             title="Por que nos escolher?"
             subtitle="O futuro das entregas"
           />
-          <div className="md:flex items-center justify-center overflow-x-scroll  overflow-y-hidden  md:overflow-hidden">
-            <div className="flex md:gap-6 gap-3">
-
-            <WhyChooseUs
-              title="Cabe no seu bolso"
-              paragraph="Sua encomenda é nossa prioridade! Valorizamos o seu tempo tanto quanto você. "
-            />
-            <WhyChooseUs
-              title="Entregas Rápidas"
-              paragraph="Priorizamos sua encomenda, garantindo rapidez sem comprometer a segurança."
-            />
-            <WhyChooseUs
-              title="Cuidado Personalizado"
-              paragraph="Atendimento dedicado e personalizado para atender às suas necessidades específicas."
-            />
+          <div className="items-center justify-center overflow-y-hidden overflow-x-scroll  md:flex  md:overflow-hidden">
+            <div className="flex gap-3 md:gap-6">
+              <WhyChooseUs
+                title="Cabe no seu bolso"
+                paragraph="Sua encomenda é nossa prioridade! Valorizamos o seu tempo tanto quanto você. "
+              />
+              <WhyChooseUs
+                title="Entregas Rápidas"
+                paragraph="Priorizamos sua encomenda, garantindo rapidez sem comprometer a segurança."
+              />
+              <WhyChooseUs
+                title="Cuidado Personalizado"
+                paragraph="Atendimento dedicado e personalizado para atender às suas necessidades específicas."
+              />
             </div>
           </div>
         </div>
+        {/* <div className="">
+          <Title
+            title="Perguntas Frequentes"
+            subtitle="Perguntas sobre a mix"
+          />
+          <Faq title="Onde atuamos?" paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+        </div> */}
       </Wrapper>
       <Footer />
     </>
