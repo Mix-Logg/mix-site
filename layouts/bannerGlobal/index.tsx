@@ -17,7 +17,7 @@ export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
           <div className="absolute inset-0 rounded-3xl bg-terciary opacity-50"></div>
         </div>
 
-        <div className="absolute inset-0 items-center justify-center px-4 py-11 text-white md:flex md:gap-96 md:p-0">
+        <div className="absolute inset-0 items-center justify-center px-4 py-11 text-complement1 md:flex md:gap-96 md:p-0">
           <p className="flex items-center text-center text-4xl font-extrabold text-primary md:text-5xl">
             {title}
           </p>

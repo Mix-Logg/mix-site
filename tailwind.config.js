@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-primary":
-          "linear-gradient(91deg, #009FE3 0.73%, #7C00FF 99.35%);",
+        'gradient-primary': 'linear-gradient(to right, #ff5f00, #facc15)',
+
       },
       fontFamily: {
         sans: 'var(--font-roboto)',

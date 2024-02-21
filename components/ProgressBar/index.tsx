@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function ProgressBar() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -13,16 +13,16 @@ export default function ProgressBar() {
       setScrollPercentage(percentage);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <div
-      className={`fixed top-0 left-0 h-1 bg-primary transition-all duration-300 ease-in-out`}
+      className={` gradient fixed left-0 top-0 h-1 rounded-full bg-gradient-primary transition-all duration-300 ease-in-out`}
       style={{ width: `${scrollPercentage}%` }}
     />
   );

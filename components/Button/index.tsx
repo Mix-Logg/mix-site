@@ -14,7 +14,7 @@ export default function Button({
         <button
           type={type} 
           onClick={onClick}
-          className={`rounded-full border border-primary transition duration-300 ease-in-out  cursor-pointer px-4 py-2 font-bold text-primary hover:bg-primary hover:bg-none hover:text-complement1 ${className}`}
+          className={`rounded-full border border-primary hover:border-complement1 transition duration-300 ease-in-out  cursor-pointer px-4 py-2 font-bold text-primary hover:bg-gradient-primary  hover:text-complement1 ${className}`}
         >
           {text}
         </button>
@@ -26,7 +26,7 @@ export default function Button({
     <button
       type={type} 
       onClick={onClick}
-      className={`rounded-full border border-primary transition duration-300 ease-in-out cursor-pointer px-4 py-2 font-bold text-primary hover:bg-primary hover:bg-none hover:text-complement1 ${className}`}
+      className={`rounded-full border border-primary hover:border-complement1 transition duration-300 ease-in-out cursor-pointer px-4 py-2 font-bold text-primary hover:bg-gradient-primary  hover:text-complement1 ${className}`}
     >
       {text}
     </button>
