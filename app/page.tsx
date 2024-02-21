@@ -1,3 +1,5 @@
+import Title from "../components/Title";
+import WhyChooseUs from "../components/WhyChooseUs";
 import Banner from "../layouts/bannerHome";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
@@ -44,6 +46,29 @@ export default function Home() {
       <Wrapper>
         <div className="h-screen">
           <Banner />
+        </div>
+        <div className="-mt-40">
+          <Title
+            title="Por que nos escolher?"
+            subtitle="O futuro das entregas"
+          />
+          <div className="md:flex items-center justify-center overflow-x-scroll  overflow-y-hidden  md:overflow-hidden">
+            <div className="flex md:gap-6 gap-3">
+
+            <WhyChooseUs
+              title="Cabe no seu bolso"
+              paragraph="Priorizamos sua encomenda, garantindo rapidez sem comprometer a segurança."
+            />
+            <WhyChooseUs
+              title="Entregas Rápidas"
+              paragraph="Sua encomenda é nossa prioridade! Valorizamos o seu tempo tanto quanto você."
+            />
+            <WhyChooseUs
+              title="Cuidado Personalizado"
+              paragraph="Atendimento dedicado e personalizado para atender às suas necessidades específicas."
+            />
+            </div>
+          </div>
         </div>
       </Wrapper>
       <Footer />
