@@ -40,7 +40,7 @@ export default function WhyChooseUs({ title, paragraph }: WhyChooseUsProps) {
             {icon}
           </div>
           <div className="mt-2 flex flex-col gap-1">
-            <p className="text-base font-semibold text-complement1">
+            <p className="text-base font-bold text-complement1">
               {invalidTitle ? "Título inválido" : title}
             </p>
             <p className="w-52 text-justify text-sm font-normal text-complement1">

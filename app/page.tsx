@@ -57,11 +57,11 @@ export default function Home() {
 
             <WhyChooseUs
               title="Cabe no seu bolso"
-              paragraph="Priorizamos sua encomenda, garantindo rapidez sem comprometer a segurança."
+              paragraph="Sua encomenda é nossa prioridade! Valorizamos o seu tempo tanto quanto você. "
             />
             <WhyChooseUs
               title="Entregas Rápidas"
-              paragraph="Sua encomenda é nossa prioridade! Valorizamos o seu tempo tanto quanto você."
+              paragraph="Priorizamos sua encomenda, garantindo rapidez sem comprometer a segurança."
             />
             <WhyChooseUs
               title="Cuidado Personalizado"
