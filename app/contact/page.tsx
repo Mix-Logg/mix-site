@@ -1,49 +1,17 @@
+// app/contact
 "use client";
-import React, { useState, useEffect } from "react";
 import Header from "../../layouts/header";
 import Button from "../../components/Button";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";
 import Wrapper from "../../layouts/wrapper";
 import Footer from "../../layouts/footer";
+import useMessageWhatsAppName from "../../hooks/useMessageWhatsAppName";
 
 export default function Contact() {
-  const [nome, setNome] = useState("");
-  const [isMobile, setIsMobile] = useState(false);
-  const [nomeErro, setNomeErro] = useState("");
+  const { isMobile, nome, nomeErro, handleNomeChange, enviarMensagemWhatsApp } =
+    useMessageWhatsAppName();
 
-  useEffect(() => {
-    const isMobileDevice = /Mobi/i.test(navigator.userAgent);
-    setIsMobile(isMobileDevice);
-  }, []);
-
-  const handleNomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNome(e.target.value);
-    setNomeErro("");
-  };
-
-  const enviarMensagemWhatsApp = () => {
-    const numeroWhatsApp = process.env.NEXT_PUBLIC_NUMBER_MIX;
-    const mensagem = `Olá, meu nome é ${nome} gostaria de saber mais sobre a Mix!`;
-
-    let linkWhatsApp;
-    if (!isNomeValido) {
-      setNomeErro("Por favor, preencha o campo com seu nome!");
-      return;
-    }
-    if (isMobile) {
-      linkWhatsApp = `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-        mensagem
-      )}`;
-    } else {
-      linkWhatsApp = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-        mensagem
-      )}`;
-    }
-
-    window.location.href = linkWhatsApp;
-  };
-  const isNomeValido = nome.trim().length > 0 && /^[a-zA-Z]+$/.test(nome);
   return (
     <>
       <Header />

@@ -1,4 +1,3 @@
-// hooks/useMessageWhatsApp.ts
 import useIsMobile from '../useIsMobile';
 
 const useMessageWhatsApp = () => {
