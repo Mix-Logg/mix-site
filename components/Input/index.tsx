@@ -1,6 +1,7 @@
 "use client";
 import { Dispatch, SetStateAction, ChangeEvent } from "react";
-
+import InputMask from "react-input-mask";
+import Mask from "../../utils/custom/input-mask";
 interface InputProps {
   idInput: string;
   defaultValue?: string;
@@ -14,6 +15,7 @@ interface InputProps {
     | "date"
     | "number"
     | "datetime-local";
+  maskType?: "PHONE" | "NONE";
   placeholder?: string;
   className?: string;
   textColor?: string;
@@ -38,7 +40,9 @@ interface InputProps {
 interface LabelProps {
   label: string;
 }
-
+function removeCharacters(str: string): string {
+  return str.replace(/[^a-zA-Z0-9]/g, '');
+}
 export default function Input({
   idInput,
   type = "text",
@@ -52,35 +56,38 @@ export default function Input({
   handleOnChange,
   value,
   width = "w-full",
-  height = "   ",
+  height = "",
   padding = "p-3",
   maxlength,
   minLength,
   readonly = false,
   hasError,
   label,
+  maskType = "PHONE" || "NONE",
 }: InputProps & LabelProps) {
   return (
     <>
       <div className="flex flex-col gap-2">
         <label
           htmlFor={idInput}
-          className="cursor-pointer text-sm text-terciary font-normal"
+          className="cursor-pointer text-sm font-normal text-terciary"
         >
           {label}
         </label>
-        <input
+        <InputMask
           id={idInput}
           readOnly={readonly}
           minLength={minLength}
           maxLength={maxlength}
           value={value}
           type={type}
+          mask={Mask(maskType)}
           required={required}
-          className={`${className} ${width}  ${height} ${padding} text-sm ${textColor} ${hoverBgColor} bg-complement1 transition duration-300 ease-in-out border-neutral-300 font-normal hover:border-primary ${ringColor} ${focusRingColor}  focus:outline-non rounded-md placeholder-secondary shadow-sm focus:outline-none ${
+          className={`${className} ${width}  ${height} ${padding} text-sm ${textColor} ${hoverBgColor} border-neutral-300 bg-complement1 font-normal transition duration-300 ease-in-out hover:border-primary ${ringColor} ${focusRingColor}  focus:outline-non rounded-md placeholder-secondary shadow-sm focus:outline-none ${
             hasError && "text-red-500 ring-red-500"
           }`}
           placeholder={placeholder}
+          
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             handleOnChange(e.target.value)
           }

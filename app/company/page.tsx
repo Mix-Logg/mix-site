@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import Header from "../../layouts/header";
 import Wrapper from "../../layouts/wrapper";
 import Footer from "../../layouts/footer";
@@ -8,59 +8,37 @@ import Title from "../../components/Title";
 import Input from "../../components/Input";
 import Cars from "../../assets/svg/cars.svg";
 import handleSetState from "../../utils/handleSetState";
+import ReCAPTCHA from "react-google-recaptcha";
 import Button from "../../components/Button";
-import searchCep from "../../hooks/useSearchCep";
-import { error } from "console";
+import InputMask from "react-input-mask";
 
 export default function Company() {
-  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [corporateName, setCorporateName] = useState("");
   const [areaActivity, setAreaActivity] = useState("");
-  const [street, setStreet] = useState("");
-  const [numberStreet, setNumberStreet] = useState("");
-  const [zipCode, setZipCode] = useState("");
   const [companyTelephone, setCompanyTelephone] = useState("");
-  const [neighborhood, setNeighborhood] = useState("");
-  const [city, setCity] = useState("");
-  const [uf, setUf] = useState("");
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
     console.log("Dados do formulário:", {
-      fullName,
       email,
       corporateName,
       areaActivity,
-      street,
-      numberStreet,
-      zipCode,
-      city,
-      uf,
       companyTelephone,
     });
   };
 
-  const changeSearchCep = async (zipcode: string) => {
-    if (zipcode.length === 8) {
-      const result = await searchCep(zipcode);
-      setZipCode(zipcode);
-      setStreet(result.logradouro);
-      setNeighborhood(result.bairro);
-      setCity(result.localidade);
-      setUf(result.uf);
-      console.log(result);
-      return;
-    }
-    setZipCode(zipcode);
-  };
+  function onRecaptchaChange(value: string | null) {
+    setRecaptchaValue(value);
+  }
 
   return (
     <>
       <Header />
       <Wrapper>
-        <div className="items-center justify-center gap-4  md:flex md:flex-row-reverse">
+        <div className=" items-center justify-center gap-4  md:flex md:flex-row-reverse">
           <form
             action="#"
             method="POST"
@@ -68,14 +46,26 @@ export default function Company() {
             onSubmit={handleSubmit}
           >
             <Title title="Cadastre sua empresa" subtitle="" className="" />
-            <div className="">
+            <div className="flex gap-4">
               <Input
-                label="Nome Completo"
-                idInput="fullName"
-                placeholder="Alberto Silva"
+                label="Razão Social"
+                idInput="corporateName"
+                placeholder="Mixservlog"
+                maskType="NONE"
+                required
                 type="text"
-                value={fullName}
-                handleOnChange={handleSetState(setFullName)}
+                value={corporateName}
+                handleOnChange={handleSetState(setCorporateName)}
+              />
+              <Input
+                label="Ramo de atuação"
+                idInput="AreaActivity"
+                placeholder="Transportes"
+                required
+                type="text"
+                maskType="NONE"
+                value={areaActivity}
+                handleOnChange={handleSetState(setAreaActivity)}
               />
             </div>
             <div className="flex gap-4">
@@ -84,119 +74,35 @@ export default function Company() {
                 idInput="email"
                 placeholder="seuemail@gmail.com"
                 required
+                maskType="NONE"
                 type="email"
                 value={email}
                 handleOnChange={handleSetState(setEmail)}
               />
               <Input
-                label="Número contato"  
+                label="Número contato"
                 idInput="CompanyTelephone"
                 placeholder="(11) 97050-2006"
                 required
+                maskType="PHONE"
                 type="text"
                 value={companyTelephone}
                 handleOnChange={handleSetState(setCompanyTelephone)}
               />
             </div>
-              <Input
-                label="Razão Social"
-                idInput="corporateName"
-                placeholder="Mixservlog"
-                required
-                type="text"
-                value={corporateName}
-                handleOnChange={handleSetState(setCorporateName)}
-              />
-            <div className="flex gap-4">
-              <Input
-                label="Ramo de atuação"
-                idInput="AreaActivity"
-                placeholder="Transportes"
-                required
-                type="text"
-                value={areaActivity}
-                handleOnChange={handleSetState(setAreaActivity)}
-              />
-              <Input
-                label="CNPJ"
-                idInput="AreaActivity"
-                placeholder="12.345.678/0001-09"
-                required
-                type="text"
-                value={areaActivity}
-                handleOnChange={handleSetState(setAreaActivity)}
-              />
-            </div>
-            <div className="flex gap-4">
-              <Input
-                label="CEP"
-                idInput="zipCode"
-                placeholder="10206-456"
-                required
-                type="text"
-                value={zipCode}
-                handleOnChange={(txt: string) => changeSearchCep(txt)}
-              />
-              <Input
-                label="Endereço"
-                idInput="street"
-                placeholder="Rua Mix"
-                required
-                type="text"
-                value={street}
-                handleOnChange={handleSetState(setStreet)}
-              />
-            </div>
-            <div className="flex gap-4">
-              <Input
-                label="Bairro"
-                idInput="neighborhood"
-                placeholder="São Mix"
-                required
-                type="text"
-                value={neighborhood}
-                handleOnChange={handleSetState(setNeighborhood)}
-              />
-              <Input
-                label="Número"
-                idInput="numberStreet"
-                placeholder="102"
-                required
-                type="text"
-                value={numberStreet}
-                handleOnChange={handleSetState(setNumberStreet)}
-              />
-            </div>
-            <div className="flex gap-4">
-              <Input
-                label="Cidade"
-                idInput="city"
-                placeholder="São Paulo"
-                required
-                type="text"
-                value={city}
-                handleOnChange={handleSetState(setCity)}
-              />
-              <Input
-                label="UF"
-                idInput="uf"
-                placeholder="SP"
-                required
-                type="text"
-                value={uf}
-                handleOnChange={handleSetState(setUf)}
-              />
-            </div>
 
-            <div>
-              <button
-                type="submit"
-                className="bg-m-w-blue-400 hover:bg-m-blue-600 focus-visible:outline-m-blue-600 bg-w-blue-400 flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm transition duration-300 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                Entrar
-              </button>
-            </div>
+            {/* <ReCAPTCHA
+              sitekey="6LeKqH0pAAAAABsZQJuO57__cr3b1OlOoIMF5M6v"
+              onChange={onRecaptchaChange}
+            /> */}
+
+            <Button
+              type="submit"
+              text="Cadastrar"
+              className="w-full rounded-lg"
+            />
           </form>
+
           <Image
             src={Cars}
             alt="Carros MIX"
