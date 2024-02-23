@@ -6,7 +6,7 @@ import {
   FaWhatsapp,
   FaLinkedinIn,
 } from "react-icons/fa";
-import useMessageWhatsApp from "../../hooks/useMessageWhatsApp";
+import useMessageWhatsApp from "../../utils/useMessageWhatsApp";
 export default function SocialMedia({ type }: SocialMediaProps) {
   const { isMobile, enviarMensagemWhatsApp } = useMessageWhatsApp();
   let socialMediaContent;

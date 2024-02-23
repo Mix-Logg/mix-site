@@ -22,7 +22,7 @@ export default function ProgressBar() {
 
   return (
     <div
-      className={` gradient fixed left-0 top-0 h-1 rounded-full bg-gradient-primary transition-all duration-300 ease-in-out`}
+      className={`gradient fixed left-0 top-0 h-1 rounded-full bg-gradient-primary transition-all duration-300 ease-in-out`}
       style={{ width: `${scrollPercentage}%` }}
     />
   );

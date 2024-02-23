@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useIsMobile from '../useIsMobile';
+import useIsMobile from './useIsMobile';
 
 const useMessageWhatsApp = () => {
   const isMobile = useIsMobile();

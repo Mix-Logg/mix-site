@@ -6,7 +6,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";
 import Wrapper from "../../layouts/wrapper";
 import Footer from "../../layouts/footer";
-import useMessageWhatsAppName from "../../hooks/useMessageWhatsAppName";
+import useMessageWhatsAppName from "../../utils/useMessageWhatsAppName";
 
 export default function Contact() {
   const { isMobile, nome, nomeErro, handleNomeChange, enviarMensagemWhatsApp } =

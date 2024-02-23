@@ -2,10 +2,18 @@
 import { Dispatch, SetStateAction, ChangeEvent } from "react";
 
 interface InputProps {
-  id?: string;
+  idInput: string;
   defaultValue?: string;
   name?: string;
-  type?: "text" | "search" | "password" | "email" | "checkbox" | "date" | "number" | "datetime-local";
+  type?:
+    | "text"
+    | "search"
+    | "password"
+    | "email"
+    | "checkbox"
+    | "date"
+    | "number"
+    | "datetime-local";
   placeholder?: string;
   className?: string;
   textColor?: string;
@@ -27,15 +35,19 @@ interface InputProps {
   padding?: string;
   hasError?: boolean;
 }
+interface LabelProps {
+  label: string;
+}
 
 export default function Input({
+  idInput,
   type = "text",
   placeholder = "",
   className,
-  textColor = "text-dark-700",
-  ringColor = "ring-dark-300",
-  hoverBgColor = "hover:bg-dark-50",
-  focusRingColor = "focus:ring-dark-500",
+  textColor = "text-terciary",
+  ringColor = "ring-primary",
+  hoverBgColor = "hover:bg-none",
+  focusRingColor = "focus:ring-primary",
   required,
   handleOnChange,
   value,
@@ -46,20 +58,34 @@ export default function Input({
   minLength,
   readonly = false,
   hasError,
-}: InputProps) {
+  label,
+}: InputProps & LabelProps) {
   return (
-    <input
-      readOnly={readonly} 
-      minLength={minLength}
-      maxLength={maxlength}
-      value={value}
-      type={type}
-      required={required}
-      className={`${className} ${width}  ${height} ${padding} text-sm ${textColor} ${hoverBgColor} font-normal hover:border-primary border-gray-300 ${ringColor} ${focusRingColor}  focus:outline-none rounded-md shadow-sm focus:outline-non placeholder-gray-400 ${hasError && 'ring-red-500 text-red-500'}`}
-      placeholder={placeholder}
-      onChange={(e: ChangeEvent<HTMLInputElement>) =>
-        handleOnChange(e.target.value)
-      }
-    />
+    <>
+      <div className="flex flex-col gap-2">
+        <label
+          htmlFor={idInput}
+          className="cursor-pointer text-sm text-terciary font-normal"
+        >
+          {label}
+        </label>
+        <input
+          id={idInput}
+          readOnly={readonly}
+          minLength={minLength}
+          maxLength={maxlength}
+          value={value}
+          type={type}
+          required={required}
+          className={`${className} ${width}  ${height} ${padding} text-sm ${textColor} ${hoverBgColor} bg-complement1 transition duration-300 ease-in-out border-neutral-300 font-normal hover:border-primary ${ringColor} ${focusRingColor}  focus:outline-non rounded-md placeholder-secondary shadow-sm focus:outline-none ${
+            hasError && "text-red-500 ring-red-500"
+          }`}
+          placeholder={placeholder}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            handleOnChange(e.target.value)
+          }
+        />
+      </div>
+    </>
   );
 }
