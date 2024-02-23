@@ -57,7 +57,7 @@ export default function Home() {
             <div className="flex gap-3 md:gap-6">
               <WhyChooseUs
                 title="Cabe no seu bolso"
-                paragraph="Sua encomenda é nossa prioridade! Valorizamos o seu tempo tanto quanto você. "
+                paragraph="Garantimos um serviço de qualidade que se adequa ao seu bolso."
               />
               <WhyChooseUs
                 title="Entregas Rápidas"
