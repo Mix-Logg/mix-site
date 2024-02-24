@@ -3,6 +3,6 @@ export default function Mask(type: string) {
     case "PHONE":
       return "(99) 99999-9999";
     default:
-      return undefined;
+      return "";
   }
 }

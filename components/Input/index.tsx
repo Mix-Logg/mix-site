@@ -15,7 +15,7 @@ interface InputProps {
     | "date"
     | "number"
     | "datetime-local";
-  maskType?: "PHONE" | "NONE";
+  maskType: string;
   placeholder?: string;
   className?: string;
   textColor?: string;
