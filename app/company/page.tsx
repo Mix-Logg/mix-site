@@ -11,6 +11,9 @@ import handleSetState from "../../utils/handleSetState";
 import ReCAPTCHA from "react-google-recaptcha";
 import Button from "../../components/Button";
 import RemoveNonNumericCharacters from "../../utils/custom/remove-mask";
+import Modal from "../../components/Modal";
+import Warning from "../../components/Modal/warnings";
+import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
 
 export default function Company() {
   const [email, setEmail] = useState("");
@@ -18,6 +21,7 @@ export default function Company() {
   const [areaActivity, setAreaActivity] = useState("");
   const [companyTelephone, setCompanyTelephone] = useState("");
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,6 +34,10 @@ export default function Company() {
     });
   };
 
+  const closeWindow = () => {
+    setIsOpen(!closeWindow);
+  };
+
   function onRecaptchaChange(value: string | null) {
     setRecaptchaValue(value);
   }
@@ -38,7 +46,17 @@ export default function Company() {
     <>
       <Header />
       <Wrapper>
+        <Modal show={!closeWindow}>
+          <Warning
+            buttonText="Aguardar"
+            type="WARNING"
+            title="Loja já cadastrada!"
+            paragraph="Aguarde até que um de nosso atendentes entre em contato!"
+          />
+        </Modal>
         <div className=" items-center justify-center gap-4  md:flex md:flex-row-reverse">
+          <FadeIn>
+
           <form
             action="#"
             method="POST"
@@ -100,18 +118,19 @@ export default function Company() {
 
             <Button
               type="submit"
-              text="Cadastrar"
-              className="w-full rounded-lg"
+              text="Cadastrar agora"
+              className="w-full bg-primary text-lg border-none text-white rounded-lg"
             />
           </form>
-
+          </FadeIn>
+          <FadeIn>
           <Image
             src={Cars}
             alt="Carros MIX"
             className=""
             width={400}
             height={400}
-          />
+          /></FadeIn>
         </div>
       </Wrapper>
       <Footer />

@@ -1,5 +1,5 @@
-export default function Mask(type: string | undefined) {
-  switch (type) {
+export default function Mask(exception: string) {
+  switch (exception) {
     case "PHONE":
       return "(99) 9999-9999";
     case "CPF":
