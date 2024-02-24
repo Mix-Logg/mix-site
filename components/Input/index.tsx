@@ -1,5 +1,5 @@
 "use client";
-import { Dispatch, SetStateAction, ChangeEvent } from "react";
+import { Dispatch, SetStateAction, ChangeEvent, useState } from "react";
 import InputMask from "react-input-mask";
 import Mask from "../../utils/custom/input-mask";
 interface InputProps {
@@ -40,9 +40,9 @@ interface InputProps {
 interface LabelProps {
   label: string;
 }
-function removeCharacters(str: string): string {
-  return str.replace(/[^a-zA-Z0-9]/g, '');
-}
+
+
+
 export default function Input({
   idInput,
   type = "text",
@@ -65,6 +65,7 @@ export default function Input({
   label,
   maskType,
 }: InputProps & LabelProps) {
+  
   return (
     <>
       <div className="flex flex-col gap-2">

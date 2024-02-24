@@ -10,7 +10,7 @@ import Cars from "../../assets/svg/cars.svg";
 import handleSetState from "../../utils/handleSetState";
 import ReCAPTCHA from "react-google-recaptcha";
 import Button from "../../components/Button";
-import InputMask from "react-input-mask";
+import RemoveNonNumericCharacters from "../../utils/custom/remove-mask";
 
 export default function Company() {
   const [email, setEmail] = useState("");
@@ -87,7 +87,9 @@ export default function Company() {
                 maskType="PHONE"
                 type="text"
                 value={companyTelephone}
-                handleOnChange={handleSetState(setCompanyTelephone)}
+                handleOnChange={(value: string) =>
+                  setCompanyTelephone(RemoveNonNumericCharacters(value))
+                }
               />
             </div>
 

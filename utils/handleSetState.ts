@@ -1,5 +1,5 @@
-const handleSetState = (setState:any) => (e:any) => {
-    setState(e)
-}
+const handleSetState = (setState: any) => (e: any) => {
+  setState(e);
+};
 
-export default handleSetState
+export default handleSetState;
