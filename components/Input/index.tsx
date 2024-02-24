@@ -63,7 +63,7 @@ export default function Input({
   readonly = false,
   hasError,
   label,
-  maskType = "PHONE" || "NONE",
+  maskType,
 }: InputProps & LabelProps) {
   return (
     <>
