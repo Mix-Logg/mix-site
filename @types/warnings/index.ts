@@ -1,6 +1,7 @@
 interface WarningsProps {
-    type: string;
-    title: string;
-    paragraph: string;
-    buttonText: string;
-  }
+  type: string;
+  title?: string;
+  paragraph?: string;
+  buttonText: string;
+  show: boolean
+}

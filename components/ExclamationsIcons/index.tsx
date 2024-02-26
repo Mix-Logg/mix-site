@@ -11,22 +11,36 @@ export default function Exclamation({ type, className }: ExclamationProps) {
   switch (type) {
     case "FAILED":
       icon = (
-        <div className={`${className} rounded-lg bg-red-100 p-1 inline-flex`}>
+        <div className={`${className} inline-flex rounded-lg bg-red-100 p-1`}>
           <HiOutlineExclamation className="h-10 w-10 text-red-600" />
         </div>
       );
       break;
-      case "WARNING":
+    case "WARNING":
       icon = (
-        <div className={`${className} rounded-lg bg-amber-100 p-1 inline-flex`}>
+        <div className={`${className} inline-flex rounded-lg bg-amber-100 p-1`}>
           <HiOutlineExclamation className="h-10 w-10 text-amber-600" />
         </div>
       );
       break;
+    case "AWAIT":
+      icon = (
+        <div className={`${className} inline-flex rounded-lg bg-blue-100 p-1`}>
+          <HiOutlineExclamation className="h-10 w-10 text-blue-600" />
+        </div>
+      );
+      break;
 
+    case "SUCCESSFUL":
+      icon = (
+        <div className={`${className} inline-flex rounded-lg bg-green-100 p-1`}>
+          <HiOutlineExclamation className="h-10 w-10 text-green-600" />
+        </div>
+      );
+      break;
     default:
       icon = (
-        <div className="items-center text-neutral-600 rounded-lg bg-neutral-100 p-1 inline-flex">
+        <div className="inline-flex items-center rounded-lg bg-neutral-100 p-1 text-neutral-600">
           <HiOutlineExclamation className="h-10 w-10 text-neutral-600" />
           <p>passe nome de icone válido</p>
         </div>
