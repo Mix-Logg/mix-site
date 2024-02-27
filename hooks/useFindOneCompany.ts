@@ -13,13 +13,14 @@ function useFindOneCompany() {
   } = useLoaderStates();
 
   async function handleFindOneCadasterCompany(
-    companyTelephone: string
+    companyTelephone: string,
+    email: string
   ): Promise<number | void> {
     let resposta;
     try {
       setLoader(true);
-      resposta = await axios.get(
-        process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company/" + companyTelephone
+       resposta = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_MIXSERVLOG}company/${companyTelephone}/${email}`
       );
 
       if (resposta.data === 200) {

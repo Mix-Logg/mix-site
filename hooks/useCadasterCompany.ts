@@ -23,14 +23,14 @@ function useCadasterCompany() {
     try {
       setLoader(true);
 
-      let resGet = await handleFindOneCadasterCompany(companyTelephone);
+      let resGet = await handleFindOneCadasterCompany(companyTelephone, email);
 
       if (resGet === 200) {
         setLoaderFailed(true);
         return;
       } else {
         resposta = await axios.post(
-          process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company",
+          `${process.env.NEXT_PUBLIC_API_MIXSERVLOG}company`,
           {
             corporateName,
             email,
