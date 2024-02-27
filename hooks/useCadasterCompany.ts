@@ -24,7 +24,7 @@ function useCadasterCompany() {
 
       let resGet = await handleFindOneCadasterCompany(companyTelephone);
 
-      if (resGet === 200) {
+      if (resGet === 409) {
         setLoaderFailed(true);
         return;
       } else {
