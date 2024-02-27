@@ -1,7 +1,7 @@
 export default function Mask(exception: string) {
   switch (exception) {
     case "PHONE":
-      return "(99) 9999-9999";
+      return "(99) 99999-9999";
     case "CPF":
       return "999.999.999-99";
     case "CNPJ":
