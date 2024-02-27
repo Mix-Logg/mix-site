@@ -27,7 +27,7 @@ function useFindOneCompany() {
         setLoaderSuccessful(true);
         return 200;
       }
-      return 500;
+      return 409;
     } catch (erro) {
       console.error("Erro na requisição:", erro);
       throw erro;
