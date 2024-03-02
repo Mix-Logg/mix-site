@@ -19,35 +19,30 @@ function useCadasterCompany() {
     email: string,
     companyTelephone: string
   ) {
-    let resposta;
     try {
       setLoader(true);
 
-      let resGet = await handleFindOneCadasterCompany(companyTelephone);
-
-      if (resGet === 200) {
+      let resGet = await handleFindOneCadasterCompany(companyTelephone, email);
+      if (resGet === 409) {
         setLoaderFailed(true);
-        return;
-      } else {
-        resposta = await axios.post(
-          process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company",
-          {
-            corporateName,
-            email,
-            companyTelephone,
-          }
-        );
-        setLoaderSuccessful(true);
-        if (resposta.data === 200) {
-          setLoader(false);
-          setLoaderSuccessful(true);
-          return;
-        }
+        return 409;
       }
+      const resposta = await axios.post(
+        process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company",
+        {
+          corporateName,
+          email,
+          companyTelephone,
+        }
+      );
+
+      if (resposta.status === 200) {
+        setLoaderSuccessful(true);
+        return 200;
+      }
+      setLoaderSuccessful(true);
     } catch (erro) {
       console.error("Erro na requisição:", erro);
-
-      setLoaderFailed(true);
     } finally {
       setLoader(false);
     }

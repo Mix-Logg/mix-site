@@ -63,7 +63,7 @@ export default function Company() {
           type="FAILED"
           show={loaderFailed}
         />
-        <div className=" items-center justify-center gap-4  md:flex md:flex-row-reverse">
+        <div className="items-center justify-center gap-4  md:flex md:flex-row-reverse">
           <FadeIn>
             <form
               action="#"

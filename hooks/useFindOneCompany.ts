@@ -13,28 +13,33 @@ function useFindOneCompany() {
   } = useLoaderStates();
 
   async function handleFindOneCadasterCompany(
-    companyTelephone: string
+    companyTelephone: string,
+    email: string
   ): Promise<number | void> {
     let resposta;
     try {
       setLoader(true);
       resposta = await axios.get(
-        process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company/" + companyTelephone
+        process.env.NEXT_PUBLIC_API_MIXSERVLOG +
+          "company/" +
+          companyTelephone +
+          "/" +
+          email
       );
-
-      if (resposta.data === 200) {
-        setLoaderSuccessful(true);
-        return 200;
+      if (resposta.data.status === 409) {
+        setLoaderFailed(true);
+        return 409;
       }
-      return 500;
+      return 200;
     } catch (erro) {
       console.error("Erro na requisição:", erro);
       throw erro;
     } finally {
       setLoader(false);
-      if (resposta && resposta.data === 200) {
+      if (resposta && resposta.data.status === 200) {
         setLoaderSuccessful(true);
       }
+      setLoaderFailed(true);
     }
   }
 
