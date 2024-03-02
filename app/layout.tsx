@@ -1,5 +1,3 @@
-"use client";
-
 import "../assets/css/globals.css";
 import { Roboto_Flex as Roboto } from "next/font/google";
 import { ReactNode } from "react";
