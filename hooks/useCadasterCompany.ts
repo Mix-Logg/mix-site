@@ -22,20 +22,21 @@ function useCadasterCompany() {
     try {
       setLoader(true);
 
-      let resGet = await handleFindOneCadasterCompany(companyTelephone);
-
+      let resGet = await handleFindOneCadasterCompany(companyTelephone, email);
       if (resGet === 409) {
         setLoaderFailed(true);
-        return;
-      } else {
-        resposta = await axios.post(
-          process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company",
-          {
-            corporateName,
-            email,
-            companyTelephone,
-          }
-        );
+        return 409;
+      }
+      const resposta = await axios.post(
+        process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company",
+        {
+          corporateName,
+          email,
+          companyTelephone,
+        }
+      );
+
+      if (resposta.status === 200) {
         setLoaderSuccessful(true);
         return 200;
       }

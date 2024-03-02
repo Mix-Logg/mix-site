@@ -20,13 +20,17 @@ function useFindOneCompany() {
     try {
       setLoader(true);
       resposta = await axios.get(
-        process.env.NEXT_PUBLIC_API_MIXSERVLOG + "company/" + companyTelephone
+        process.env.NEXT_PUBLIC_API_MIXSERVLOG +
+          "company/" +
+          companyTelephone +
+          "/" +
+          email
       );
       if (resposta.data.status === 409) {
         setLoaderFailed(true);
         return 409;
       }
-      return 500;
+      return 200;
     } catch (erro) {
       console.error("Erro na requisição:", erro);
       throw erro;
