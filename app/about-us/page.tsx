@@ -11,6 +11,9 @@ import Title from "../../components/Title";
 export default function Aboutus() {
   return (
     <>
+     <head>
+        <title>Sobre nós | Mixservlog</title>
+      </head>
       <Header />
       <Wrapper>
         <BannerGlobal

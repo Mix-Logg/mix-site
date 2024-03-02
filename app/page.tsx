@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Faq from "../components/Faq";
 import Title from "../components/Title";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -6,39 +7,10 @@ import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 import Wrapper from "../layouts/wrapper";
 
-export const metadata = {
-  title: "Mixservlog",
-  description: "",
-  openGraph: {
-    title: "Mixservlog",
-    description: "",
-    url: "",
-    siteName: "",
-    images: [
-      {
-        url: "",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "",
-        width: 1800,
-        height: 1600,
-        alt: "banner full desktop",
-      },
-    ],
-    locale: "pt_BR",
-    type: "website",
-  },
-  icons: {
-    icon: "/favicon.svg",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
-};
+export const metadata: Metadata = {
+  title: 'Home | Mixservlog',
+  description: 'This page is home page mixservlog',
+}
 
 export default function Home() {
   return (

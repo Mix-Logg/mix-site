@@ -14,6 +14,10 @@ export default function Contact() {
 
   return (
     <>
+      <head>
+        <title>Página Contato | Mixservlog</title>
+      </head>
+
       <Header />
       <Wrapper>
         <div className="item-center mt-10 flex flex-col gap-8">

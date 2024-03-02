@@ -46,6 +46,9 @@ export default function Company() {
 
   return (
     <>
+      <head>
+        <title>Empresas | Mixservlog</title>
+      </head>
       <Header />
       <Wrapper>
         <Warnings buttonText="none" type="AWAIT" show={loader} />

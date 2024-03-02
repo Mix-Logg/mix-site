@@ -11,7 +11,7 @@ const useMessageWhatsApp = () => {
   };
   
   const enviarMensagemWhatsApp = () => {
-    const numeroWhatsApp = process.env.NEXT_PUBLIC_NUMBER_MIXSERVLOG;
+    const numeroWhatsApp = process.env.NEXT_PUBLIC_NUMBER_MIX;
     const mensagem = `Olá, gostaria de saber mais sobre a Mix!`;
     const mensagemComNome = `Olá, meu nome é ${nome} e gostaria de saber mais sobre a Mix!`;
     
