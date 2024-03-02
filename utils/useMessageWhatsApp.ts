@@ -4,7 +4,7 @@ const useMessageWhatsApp = () => {
   const isMobile = useIsMobile();
 
   const enviarMensagemWhatsApp = () => {
-    const numeroWhatsApp = process.env.NEXT_PUBLIC_NUMBER_MIX;
+    const numeroWhatsApp = process.env.NEXT_PUBLIC_NUMBER_MIXSERVLOG;
     const mensagem = `Olá, gostaria de saber mais sobre a Mix!`;
 
     let linkWhatsApp;
