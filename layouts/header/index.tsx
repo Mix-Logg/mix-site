@@ -66,7 +66,7 @@ export default function Header() {
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
-                href="/entregadores"
+                href="/delivey"
               >
                 Entregadores
               </Link>
@@ -137,7 +137,7 @@ export default function Header() {
 
                   <Link
                     className="justify-center border-b-2 border-neutral-200 py-2  text-2xl font-semibold text-terciary "
-                    href="/entregas"
+                    href="/delivery"
                   >
                     Entregadores
                   </Link>

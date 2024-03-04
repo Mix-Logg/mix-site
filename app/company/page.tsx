@@ -7,6 +7,7 @@ import Image from "next/image";
 import Title from "../../components/Title";
 import Input from "../../components/Input";
 import Cars from "../../assets/svg/cars.svg";
+import CompanyHelp from "../../assets/svg/companyhelp.svg";
 import handleSetState from "../../utils/handleSetState";
 import ReCAPTCHA from "react-google-recaptcha";
 import Button from "../../components/Button";
@@ -66,7 +67,7 @@ export default function Company() {
           type="FAILED"
           show={loaderFailed}
         />
-        <div className="items-center justify-center gap-4  md:flex md:flex-row-reverse">
+        <div className=" items-center justify-center gap-4  md:flex md:flex-row-reverse">
           <FadeIn>
             <form
               action="#"
@@ -133,6 +134,34 @@ export default function Company() {
               height={400}
             />
           </FadeIn>
+        </div>
+        <div className="mt-10 gap-40 rounded-xl p-8 md:flex">
+          <div>
+            <Title
+              title="Comunidade de empresas"
+              subtitle="Como fazer parte da nossa "
+              className="items-start"
+            />
+            <p className="text-justify text-sm font-normal text-secondary  md:text-base">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </div>
+          <Image
+            src={CompanyHelp}
+            alt="Carros MIX"
+            className=""
+            width={500}
+            height={500}
+          />
         </div>
       </Wrapper>
       <Footer />

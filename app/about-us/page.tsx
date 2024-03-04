@@ -45,7 +45,7 @@ export default function Aboutus() {
           />
         </div>
         <section id="cultura-mix">
-          <Title title="Cultura Mix" subtitle="Estamos com você" />
+          <Title title="Cultura Mix" subtitle="Estamos com você" className="items-center"/>
           <div className="justify-center gap-20 md:flex">
             <Topics
               title="Conexão"
@@ -57,7 +57,7 @@ export default function Aboutus() {
             />
             <Topics
               title="Inovação"
-              paragraph="Acreditamos que a Inovação é o caminho para melhoria continua dos  nossos processos e soluções de problemas, pilares fundamentais para o crescimento, desenvolvimento e fortalecimento dos nossos serviços de entregas. "
+              paragraph="Acreditamos que a Inovação é o caminho para melhoria continua dos  nossos processos e soluções de problemas, pilares fundamentais para o crescimento, desenvolvimento e fortalecimento dos nossos serviços logísticos."
             />
           </div>
         </section>

@@ -7,7 +7,7 @@ import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
 export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
   return (
     <FadeIn>
-      <div className="relative rounded-3xl mb-8 md:mb-16 bg-complement1">
+      <div className="relative rounded-3xl mb-6 md:mb-10 bg-complement1">
         <div className="relative flex-grow">
           <Image
             src={Multicultural}

@@ -24,6 +24,7 @@ export default function Home() {
           <Title
             title="Por que nos escolher?"
             subtitle="O futuro das entregas"
+            className="items-center"
           />
           <div className="items-center justify-center overflow-y-hidden overflow-x-scroll  md:flex  md:overflow-hidden">
             <div className="flex gap-3 md:gap-6">
