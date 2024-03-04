@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Multicultural from "../../assets/videos/multicultural.gif";
+import PeopleDelivery from "../../assets/videos/peopleDelivery.gif";
+
 import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
 
 export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {

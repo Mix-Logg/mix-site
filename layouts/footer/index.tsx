@@ -65,13 +65,13 @@ export default function Footer() {
                   Perguntas Frequentes
                 </Link>
                 <Link
-                  href={`/`}
+                  href={`/delivery#delivery-community`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
-                  Label
+                  Entregadores
                 </Link>
                 <Link
-                  href={`/`}
+                  href={`/delivery#delivery-community`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
                   Label
