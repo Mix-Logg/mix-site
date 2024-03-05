@@ -102,7 +102,7 @@ export default function Delivery() {
             </div>
           </div>
         </div>
-        <div className="items-center justify-center gap-10 md:flex">
+        <div className="mx-auto items-center justify-center gap-10 md:flex">
           <div className="flex flex-col">
             <Title
               title="Nosso aplicativo"
