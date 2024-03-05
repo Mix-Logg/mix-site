@@ -16,7 +16,7 @@ export default function ContactMix({ title, subtitle, className }: TitleProps) {
       <div className="mt-10 px-4 md:px-40 ">
         <div className="items-center justify-center gap-24 rounded-3xl bg-gradient-primary p-8 shadow-xl md:flex">
           <div className="flex flex-col gap-3  justify-center items-center  ">
-            <p className="w-96 text-center text-2xl font-extrabold text-complement1 md:text-3xl">
+            <p className="w-70 md:w-96 text-center text-2xl font-extrabold text-complement1 md:text-3xl">
               {title}
             </p>
             <p className="w-80 p-5 text-justify text-complement1 md:w-96 md:p-2 md:text-center">
