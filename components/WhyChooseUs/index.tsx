@@ -5,6 +5,12 @@ import { FadeIn, FadeInStagger } from "../Animations/FadeIn";
 import { HiOutlineExclamation } from "react-icons/hi";
 import { LiaPiggyBankSolid } from "react-icons/lia";
 import { PiHandHeart } from "react-icons/pi";
+import { IoIosPeople } from "react-icons/io";
+import { MdAddBusiness } from "react-icons/md";
+import { BsCashCoin } from "react-icons/bs";
+import { FaMedal } from "react-icons/fa";
+import { FaToolbox } from "react-icons/fa";
+
 export default function WhyChooseUs({ title, paragraph }: WhyChooseUsProps) {
   let icon,
     invalidTitle = false;
@@ -22,9 +28,22 @@ export default function WhyChooseUs({ title, paragraph }: WhyChooseUsProps) {
       break;
     case "Cuidado Personalizado":
       icon = <PiHandHeart className="h-6 w-6 text-primary md:h-8 md:w-8" />;
-
       break;
-
+    case "Vitrine de clientes":
+      icon = <IoIosPeople className="h-6 w-6 text-primary md:h-8 md:w-8" />;
+      break;
+    case "Oportunidade de negócio":
+      icon = <MdAddBusiness className="h-6 w-6 text-primary md:h-8 md:w-8" />;
+      break;
+      case "Vendas":
+        icon = <BsCashCoin className="h-6 w-6 text-primary md:h-8 md:w-8" />;
+        break;
+        case "Serviços":
+          icon = <FaToolbox className="h-6 w-6 text-primary md:h-8 md:w-8" />;
+          break;
+        case "Produtos":
+          icon = <FaMedal className="h-6 w-6 text-primary md:h-8 md:w-8" />;
+          break;
     default:
       icon = (
         <HiOutlineExclamation className="h-6 w-6 text-red-600 md:h-8 md:w-8" />

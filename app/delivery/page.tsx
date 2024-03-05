@@ -68,7 +68,7 @@ export default function Delivery() {
           <div className="inline-flex flex-col">
             <div className="">
               <Title
-                title="Vantagens Mix"
+                title="Vantagens Entregador Mix"
                 subtitle="MIX Beneficios"
                 className="text-white"
               />

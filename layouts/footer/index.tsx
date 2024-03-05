@@ -77,10 +77,10 @@ export default function Footer() {
                   Empresas
                 </Link>
                 <Link
-                  href={`/`}
+                   href={`/partners#parceiros-community`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
-                  Label
+                  Parceiros
                 </Link>
                 <Link
                   href={`/`}

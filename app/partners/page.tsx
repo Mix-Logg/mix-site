@@ -11,6 +11,8 @@ import Benefits from "../../components/Benefits";
 import cellPhone from "../../assets/svg/cellphone.svg";
 import Ocean from "../../components/Ocean";
 import ContactMix from "../../layouts/contactMix";
+import { IoIosPeople } from "react-icons/io";
+import WhyChooseUs from "../../components/WhyChooseUs";
 
 export default function Partners() {
   return (
@@ -33,10 +35,10 @@ export default function Partners() {
         </FadeIn>
         <FadeIn>
           <section
-            id="delivery-community"
+            id="parceiros-community"
             className="gap-40 rounded-xl p-4 md:flex md:p-20"
           >
-            <div id="parceiros-community">
+            <div>
               <Title
                 title="Comunidade de parceiros"
                 subtitle="Como fazer parte da nossa "
@@ -64,6 +66,35 @@ export default function Partners() {
             />
           </section>
         </FadeIn>
+        <Title
+          title="Vantagens Parceiro Mix"
+          subtitle="MIX Beneficios"
+          className="items-center"
+        />
+        <div className="items-center justify-center overflow-y-hidden overflow-x-scroll  md:flex  md:overflow-hidden">
+            <div className="flex gap-3 md:gap-6">
+              <WhyChooseUs
+                title="Vitrine de clientes"
+                paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry industry."
+              />
+              <WhyChooseUs
+                title="Oportunidade de negócio"
+                paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry industry."
+              />
+              <WhyChooseUs
+                title="Vendas"
+                paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry industry."
+              />
+               <WhyChooseUs
+                title="Serviços"
+                paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry industry."
+              />
+               <WhyChooseUs
+                title="Produtos"
+                paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry industry."
+              />
+            </div>
+          </div>
       </Wrapper>
       <ContactMix
         title="E aí, bora decolar com a nossa parceria?"
