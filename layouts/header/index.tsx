@@ -160,7 +160,12 @@ export default function Header() {
                   >
                     Empresas
                   </Link>
-
+                  <Link
+                    className="justify-center border-b-2 border-neutral-200 py-2  text-2xl font-semibold text-terciary "
+                    href="/partners"
+                  >
+                    Parceiros
+                  </Link>
                   <Link
                     className="justify-center border-b-2 border-neutral-200 py-2  text-2xl font-semibold text-terciary "
                     href="/contact"
