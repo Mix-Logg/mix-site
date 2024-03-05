@@ -32,7 +32,10 @@ export default function Delivery() {
           />
         </FadeIn>
         <FadeIn>
-          <section id="delivery-community" className="gap-40 rounded-xl p-4 md:flex md:p-20">
+          <section
+            id="delivery-community"
+            className="gap-40 rounded-xl p-4 md:flex md:p-20"
+          >
             <div id="delivery-community">
               <Title
                 title="Comunidade de entregadores"
@@ -70,7 +73,7 @@ export default function Delivery() {
                 className="text-white"
               />
             </div>
-            <p className="w-72 text-justify text-sm font-normal text-complement1 md:w-96 md:text-base">
+            <p className="w-72 text-justify text-sm font-normal text-orange-200 md:w-96 md:text-base">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -83,24 +86,26 @@ export default function Delivery() {
               Lorem Ipsum.
             </p>
           </div>
-          <div className="mt-10 inline-flex flex-col gap-4 md:mt-0">
-            <div className="flex gap-4">
-              <Benefits type="Abastecimento" />
-              <Benefits type="Troca de Óleo" />
+          <FadeIn>
+            <div className="mt-10 inline-flex flex-col gap-4 md:mt-0">
+              <div className="flex gap-4">
+                <Benefits type="Abastecimento" />
+                <Benefits type="Troca de Óleo" />
+              </div>
+              <div className="flex gap-4">
+                <Benefits type="Compra de peças" />
+                <Benefits type="Seguro de veículo" />
+              </div>
+              <div className="flex gap-4">
+                <Benefits type="Seguro de vida" />
+                <Benefits type="Guincho" />
+              </div>
+              <div className="flex gap-4">
+                <Benefits type="Cooperativa de crédito" />
+                <Benefits type="Atendimento" />
+              </div>
             </div>
-            <div className="flex gap-4">
-              <Benefits type="Compra de peças" />
-              <Benefits type="Seguro de veículo" />
-            </div>
-            <div className="flex gap-4">
-              <Benefits type="Seguro de vida" />
-              <Benefits type="Guincho" />
-            </div>
-            <div className="flex gap-4">
-              <Benefits type="Cooperativa de crédito" />
-              <Benefits type="Atendimento" />
-            </div>
-          </div>
+          </FadeIn>
         </div>
         <div className="mx-auto items-center justify-center gap-10 md:flex">
           <div className="flex flex-col">
@@ -127,7 +132,7 @@ export default function Delivery() {
           </div>
         </div>
       </Wrapper>
-      <ContactMix/>
+      <ContactMix />
 
       <Footer />
     </>

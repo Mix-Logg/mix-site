@@ -11,7 +11,6 @@ import { BsPersonGear } from "react-icons/bs";
 import { TbHearts } from "react-icons/tb";
 import { LiaPiggyBankSolid } from "react-icons/lia";
 import { GiTowTruck } from "react-icons/gi";
-import { FadeIn, FadeInStagger } from "../Animations/FadeIn";
 
 interface ExclamationProps {
   type: string;
@@ -90,13 +89,12 @@ export default function Benefits({ type, className }: ExclamationProps) {
 
   return (
     <>
-    <FadeIn>
       <div className="inline-flex">
         <div className="">
           <p className="inline-flex rounded-lg bg-orange-50 p-2 text-3xl text-primary md:text-4xl ">
             {icon}
           </p>
-          <p className="absolute -ml-2 mt-7 inline-flex rounded-full bg-orange-400 p-1  text-orange-100 shadow-md md:-ml-4 md:mt-10 text-sm">
+          <p className="absolute -ml-2 mt-7 inline-flex rounded-full bg-orange-400 p-1  text-sm text-orange-100 shadow-md md:-ml-4 md:mt-10">
             <MdOutlineCheck />
           </p>
           <p className="mt-3 w-36 text-base font-semibold text-complement1 md:text-base">
@@ -104,7 +102,6 @@ export default function Benefits({ type, className }: ExclamationProps) {
           </p>
         </div>
       </div>
-      </FadeIn>
     </>
   );
 }
