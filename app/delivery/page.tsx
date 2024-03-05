@@ -67,7 +67,7 @@ export default function Delivery() {
               <Title
                 title="Vantagens Mix"
                 subtitle="MIX Beneficios"
-                className="text-orange-200"
+                className="text-orange-300"
               />
             </div>
             <p className="w-72 text-justify text-sm font-normal text-complement1 md:w-96 md:text-base">
