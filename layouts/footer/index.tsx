@@ -71,10 +71,10 @@ export default function Footer() {
                   Entregadores
                 </Link>
                 <Link
-                  href={`/delivery#delivery-community`}
+                  href={`/company#company-community`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
-                  Label
+                  Empresas
                 </Link>
                 <Link
                   href={`/`}

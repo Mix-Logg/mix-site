@@ -7,6 +7,7 @@ import Image from "next/image";
 import Title from "../../components/Title";
 import Input from "../../components/Input";
 import Cars from "../../assets/svg/cars.svg";
+import Word from "../../assets/svg/mixCompany.svg";
 import CompanyHelp from "../../assets/svg/companyhelp.svg";
 import handleSetState from "../../utils/handleSetState";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -17,6 +18,7 @@ import Warnings from "../../components/Modal/warnings";
 import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
 import cadasterCompany from "../../hooks/useCadasterCompany";
 import useCadasterCompany from "../../hooks/useCadasterCompany";
+import ContactMix from "../../layouts/contactMix";
 
 export default function Company() {
   const [email, setEmail] = useState("");
@@ -127,15 +129,15 @@ export default function Company() {
           </FadeIn>
           <FadeIn>
             <Image
-              src={Cars}
-              alt="Carros MIX"
+              src={Word}
+              alt="mix Companys"
               className=""
-              width={400}
-              height={400}
+              width={500}
+              height={500}
             />
           </FadeIn>
         </div>
-        <div className="mt-10 gap-40 rounded-xl p-8 md:flex">
+        <section id="company-community" className="mt-2 gap-40 rounded-xl p-10 md:flex">
           <div>
             <Title
               title="Comunidade de empresas"
@@ -162,8 +164,14 @@ export default function Company() {
             width={500}
             height={500}
           />
-        </div>
+        </section>
       </Wrapper>
+      <ContactMix
+        title="E aí, bora decolar 
+              as entregas da sua empresa?"
+        subtitle="Venha fazer parte desse céu de oportunidades e inovações com a
+              gente!"
+      />
       <Footer />
     </>
   );

@@ -29,6 +29,15 @@ export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
         />
         );
         break;
+        case "Parceiros":
+        video = (
+          <Image
+          src={Multicultural}
+          alt="Mix Multicultural"
+          className="h-60 w-full rounded-3xl object-cover"
+        />
+        );
+        break;
     default:
       video = (
         <div className="inline-flex items-center rounded-lg bg-neutral-100 p-1 text-neutral-600">

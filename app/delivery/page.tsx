@@ -132,7 +132,12 @@ export default function Delivery() {
           </div>
         </div>
       </Wrapper>
-      <ContactMix />
+      <ContactMix
+        title="E aí, bora decolar 
+              suas entregas?"
+        subtitle="Venha fazer parte desse céu de oportunidades e inovações com a
+              gente!"
+      />
 
       <Footer />
     </>
