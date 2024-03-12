@@ -19,6 +19,7 @@ import { FadeIn, FadeInStagger } from "../../components/Animations/FadeIn";
 import cadasterCompany from "../../hooks/useCadasterCompany";
 import useCadasterCompany from "../../hooks/useCadasterCompany";
 import ContactMix from "../../layouts/contactMix";
+import useMessageWhatsAppCompany from "../../utils/useMessageWhatsAppCompany";
 
 export default function Company() {
   const [email, setEmail] = useState("");
@@ -41,8 +42,11 @@ export default function Company() {
     setLoader(true);
     setLoaderSuccessful(false);
     await handleCadasterCompany(corporateName, email, companyTelephone);
+    const mensagem = `Olá, somos a ${corporateName} e gostaríamos de saber mais sobre a Mix! \n\n🔸 Dados:\n☎️ ${companyTelephone}\n📧 ${email}`;
+    let linkWhatsApp = `https://web.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_NUMBER_MIX}&text=${encodeURIComponent(mensagem)}`;
+    window.location.href = linkWhatsApp;
   };
-
+    
   function onRecaptchaChange(value: string | null) {
     setRecaptchaValue(value);
   }
@@ -53,6 +57,7 @@ export default function Company() {
         <title>Empresas | Mixservlog</title>
       </head>
       <Header />
+     
       <Wrapper>
         <Warnings buttonText="none" type="AWAIT" show={loader} />
         <Warnings
@@ -137,7 +142,10 @@ export default function Company() {
             />
           </FadeIn>
         </div>
-        <section id="company-community" className="mt-2 gap-40 rounded-xl p-10 md:flex">
+        <section
+          id="company-community"
+          className="mt-2 gap-40 rounded-xl p-10 md:flex"
+        >
           <div>
             <Title
               title="Comunidade de empresas"
