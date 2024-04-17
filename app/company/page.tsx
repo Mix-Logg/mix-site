@@ -25,7 +25,6 @@ export default function Company() {
   const [corporateName, setCorporateName] = useState("");
   const [companyTelephone, setCompanyTelephone] = useState("");
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-  const [isOpen, setIsOpen] = useState(true);
   const {
     loader,
     setLoader,
@@ -36,16 +35,31 @@ export default function Company() {
     handleCadasterCompany,
   } = useCadasterCompany();
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setLoader(true);
-    setLoaderSuccessful(false);
-    await handleCadasterCompany(corporateName, email, companyTelephone);
-  };
-
   function onRecaptchaChange(value: string | null) {
     setRecaptchaValue(value);
   }
+  const handleTeste = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    await handleCadasterCompany(corporateName, email, companyTelephone);
+
+    const mensagem = `Olá, somos a ${corporateName} e gostaríamos de saber mais sobre a Mix! \n\n🔸 Dados:\n☎️ ${companyTelephone}\n📧 ${email}`;
+
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      let linkWhatsApp = `https://wa.me/${
+        process.env.NEXT_PUBLIC_NUMBER_MIXSERVLOG_COMPANY
+      }?text=${encodeURIComponent(mensagem)}`;
+      window.open(linkWhatsApp, "_blank");
+    } else {
+      let linkWhatsAppWeb = `https://web.whatsapp.com/send?phone=${
+        process.env.NEXT_PUBLIC_NUMBER_MIXSERVLOG_COMPANY
+      }&text=${encodeURIComponent(mensagem)}`;
+      window.open(linkWhatsAppWeb, "_blank");
+    }
+  };
 
   return (
     <>
@@ -53,6 +67,7 @@ export default function Company() {
         <title>Empresas | Mixservlog</title>
       </head>
       <Header />
+
       <Wrapper>
         <Warnings buttonText="none" type="AWAIT" show={loader} />
         <Warnings
@@ -75,7 +90,7 @@ export default function Company() {
               action="#"
               method="POST"
               className="flex max-w-md flex-col space-y-4 rounded-xl border border-neutral-200 bg-complement1 p-3"
-              onSubmit={handleSubmit}
+              onSubmit={handleTeste}
             >
               <Title title="Cadastre sua empresa" subtitle="" className="" />
 
@@ -127,6 +142,7 @@ export default function Company() {
               />
             </form>
           </FadeIn>
+
           <FadeIn>
             <Image
               src={Word}
@@ -137,7 +153,11 @@ export default function Company() {
             />
           </FadeIn>
         </div>
-        <section id="company-community" className="mt-2 gap-40 rounded-xl p-10 md:flex">
+
+        <section
+          id="company-community"
+          className="mt-2 gap-40 rounded-xl p-10 md:flex"
+        >
           <div>
             <Title
               title="Comunidade de empresas"
