@@ -160,7 +160,10 @@ export default function Company() {
             />
           </FadeIn>
         </div>
-        <section id="company-community" className="mt-2 gap-40 rounded-xl p-10 md:flex">
+        <section
+          id="company-community"
+          className="mt-2 gap-40 rounded-xl p-10 md:flex"
+        >
           <div>
             <Title
               title="Comunidade de empresas"
@@ -168,16 +171,12 @@ export default function Company() {
               className="items-start"
             />
             <p className="text-justify text-sm font-normal text-secondary  md:text-base">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Venha desfrutar da nossa Comunidade, oferecemos um serviço de
+              entregas com segurança e integridade da carga, monitoramento em
+              tempo real, opções de pagamento flexíveis e acessíveis. Soluções
+              que visam fortalecer o nosso compromisso em desenvolver uma
+              conexão de confiança através de atitudes éticas, ações de servir,
+              fazer organizado e entregar com qualidade.
             </p>
           </div>
           <Image

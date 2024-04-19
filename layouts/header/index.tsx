@@ -78,9 +78,16 @@ export default function Header() {
               >
                 Empresas
               </Link>
-              
-             
             </li>
+            <li className="w-28">
+              <Link
+                className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
+                href="/for-you"
+              >
+                Para você
+              </Link>
+            </li>
+
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
@@ -88,8 +95,6 @@ export default function Header() {
               >
                 Parceiros
               </Link>
-              
-             
             </li>
           </ul>
 
@@ -129,9 +134,7 @@ export default function Header() {
                   />
                 </Link>
                 <Floating
-                  className={
-                    "items-center flex cursor-pointer text-primary"
-                  }
+                  className={"flex cursor-pointer items-center text-primary"}
                   onClick={toggleMenu}
                 >
                   <HiMiniXMark className="h-8 w-8" />

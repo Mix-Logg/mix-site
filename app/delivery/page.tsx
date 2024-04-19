@@ -23,12 +23,7 @@ export default function Delivery() {
         <FadeIn>
           <BannerGlobal
             title="Entregadores"
-            paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of
-          type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged."
+            paragraph="A missão de um entregador vai além de uma simples entrega, ela  permeia o compromisso de gerar uma experiência excepcional aos clientes. Cada entrega é vista como uma oportunidade não apenas de conectar pessoas e produtos, mas também de crescimento e desenvolvimento pessoal."
           />
         </FadeIn>
         <FadeIn>
@@ -43,16 +38,14 @@ export default function Delivery() {
                 className="items-start"
               />
               <p className="text-justify text-sm font-normal text-secondary  md:text-base">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Junte-se à nossa comunidade, valorizamos a resiliência e
+                determinação dos nossos entregadores, oferecendo suporte mútuo e
+                compartilhando experiências únicas da jornada diária.
+                Encontramos forças na união e celebramos a importância do
+                Entregador para realização das entregas. A nossa comunidade
+                busca atender além das expectativas dos nossos clientes,
+                oferecendo uma verdadeira experiência transformando cada entrega
+                em uma oportunidade de conexão, crescimento e realização."
               </p>
             </div>
             <Image
@@ -74,16 +67,12 @@ export default function Delivery() {
               />
             </div>
             <p className="w-72 text-justify text-sm font-normal text-orange-200 md:w-96 md:text-base">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Construir uma rede de apoio sólida não apenas facilita a superação
+              de desafios e a busca por soluções de problemas, mas também
+              enriquece o processo ao promover o compartilhamento de recursos e
+              a colaboração entre seus membros, contribui para impulsionar o
+              crescimento sustentável a longo prazo, gerando relações que
+              promovem o desenvolvimento dos negócios.
             </p>
           </div>
           <FadeIn>

@@ -20,6 +20,7 @@ export default function BannerGlobal({ title, paragraph }: BannerGlobalProps) {
       />
       );
       break;
+      case "Para Você":
       case "Sobre nós":
         video = (
           <Image
