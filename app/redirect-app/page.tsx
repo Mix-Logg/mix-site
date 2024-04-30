@@ -55,7 +55,7 @@ export default function RedirectApp() {
         </div>
         <div className="flex flex-col gap-3 px-8 ">
           <button
-            className="flex w-full items-center justify-center gap-2 rounded-t-lg bg-orange-600 py-2 font-semibold text-complement1"
+            className="flex w-full items-center justify-center gap-2 rounded-t-lg bg-orange-600 hover:bg-orange-400 py-2 font-semibold text-complement1"
             onClick={() => handleVisitSite("site")}
           >
             <Image
@@ -68,7 +68,7 @@ export default function RedirectApp() {
             <p className="w-32 text-left">Visite nosso site</p>
           </button>
           <button
-            className="flex w-full items-center justify-center gap-2 rounded-b-lg bg-orange-500 py-2 font-semibold text-complement1"
+            className="flex w-full items-center justify-center gap-2 rounded-b-lg bg-orange-500 hover:bg-orange-400 py-2 font-semibold text-complement1"
             onClick={() => handleVisitSite("contact")}
           >
             <RiHeadphoneFill className="text-lg text-complement1" />
