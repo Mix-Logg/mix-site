@@ -88,14 +88,14 @@ export default function Header() {
               </Link>
             </li>
 
-            <li className="w-28">
+            {/* <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
                 href="/partners"
               >
                 Parceiros
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           <div className="flex items-center gap-56 md:hidden">
