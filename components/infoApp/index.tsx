@@ -109,7 +109,7 @@ export default function InfoApp(){
                     </div>
                 </div>
             </div>
-            <p className="text-justify">
+            <p className="text-justify text-secondary">
                 Temos a solução de Fretes que cabe no seu bolso, 
                 monitorada  em tempo real. 
                 Estamos empenhados em oferecer uma 
