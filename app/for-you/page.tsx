@@ -7,7 +7,7 @@ import BannerGlobal from "../../layouts/bannerGlobal";
 import Title from "../../components/Title";
 import Image from "next/image";
 import People from "../../assets/svg/foryou.svg";
-
+import InfoApp from "../../components/infoApp";
 export default function ForYou() {
   return (
     <>
@@ -18,8 +18,7 @@ export default function ForYou() {
       <Wrapper>
         <BannerGlobal
           title="Para Você"
-          paragraph="Sint esse dolore Lorem aliqua velit exercitation cupidatat sint mollit labore velit aliquip excepteur sit. Dolor velit do fugiat voluptate fugiat aliqua nostrud. Labore magna ex ad esse ullamco dolore in dolor pariatur in occaecat ipsum.
-Nisi elit laboris laborum nulla sit ipsum nulla ut ea adipisicing id exercitation. Dolor anim dolor reprehenderit minim."
+          paragraph="Oferecemos um serviço de entregas com segurança e integridade da carga, monitoramento em tempo real, opções de pagamento flexíveis e acessíveis. Soluções que visam fortalecer o nosso compromisso em desenvolver uma conexão de confiança."
         />
       </Wrapper>
 
@@ -33,16 +32,7 @@ Nisi elit laboris laborum nulla sit ipsum nulla ut ea adipisicing id exercitatio
             subtitle="Como fazer parte da nossa "
             className="items-start"
           />
-          <p className="text-justify text-sm font-normal text-secondary  md:text-base">
-            Sint esse dolore Lorem aliqua velit exercitation cupidatat sint
-            mollit labore velit aliquip excepteur sit. Dolor velit do fugiat
-            voluptate fugiat aliqua nostrud. Labore magna ex ad esse ullamco
-            dolore in dolor pariatur in occaecat ipsum. Nisi elit laboris
-            laborum nulla sit ipsum nulla ut ea adipisicing id exercitation.
-            Dolor anim dolor reprehenderit minim.Nisi elit laboris laborum nulla
-            sit ipsum nulla ut ea adipisicing id exercitation. Dolor anim dolor
-            reprehenderit minim.
-          </p>
+          <InfoApp/>
         </div>
         <Image
           src={People}

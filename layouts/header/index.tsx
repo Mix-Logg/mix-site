@@ -96,6 +96,14 @@ export default function Header() {
                 Parceiros
               </Link>
             </li> */}
+            <li className="w-28">
+              <Link
+                className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
+                href="https://dashboard-liart-xi.vercel.app/"
+              >
+                Dashboard
+              </Link>
+            </li>
           </ul>
 
           <div className="flex items-center gap-56 md:hidden">
@@ -182,6 +190,12 @@ export default function Header() {
                   >
                     Contato
                   </Link>
+                  <Link
+                    className="justify-center border-b-2 border-neutral-200 py-2  text-2xl font-semibold text-terciary "
+                    href="https://dashboard-liart-xi.vercel.app/"
+                  >
+                    Dashboard
+                  </Link>
                   <div className="py-8">
                     <SocialMedia type="" />
                   </div>
@@ -190,12 +204,16 @@ export default function Header() {
             </motion.div>
           )}
         </nav>
-        <Button
-          text="Contato"
-          className="hidden md:flex "
-          type="submit"
-          href="/contact"
-        />
+        <div className="flex gap-2">
+          <Button
+            text="Contato"
+            className="hidden md:flex "
+            type="submit"
+            href="/contact"
+          />
+        </div>
+
+        
       </header>
     </>
   );

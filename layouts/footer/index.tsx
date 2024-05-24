@@ -27,7 +27,7 @@ export default function Footer() {
                 >
                   Cultura Mix
                 </Link>
-                <Link
+                {/* <Link
                   href={`/`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
@@ -50,7 +50,7 @@ export default function Footer() {
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
                   Label
-                </Link>
+                </Link> */}
               </ul>
             </div>
             <div className="p-4">
@@ -76,7 +76,7 @@ export default function Footer() {
                 >
                   Para você
                 </Link>
-                <Link
+                {/* <Link
                    href={`/partners#parceiros-community`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
@@ -87,7 +87,7 @@ export default function Footer() {
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
                   Label
-                </Link>
+                </Link> */}
               </ul>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function Footer() {
                 >
                   Sobre nós
                 </Link>
-                <Link
+                {/* <Link
                   href={`/`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
@@ -126,7 +126,7 @@ export default function Footer() {
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
                   Label
-                </Link>
+                </Link> */}
               </ul>
             </div>
             <div className="p-4">

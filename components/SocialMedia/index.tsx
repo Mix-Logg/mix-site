@@ -15,12 +15,12 @@ export default function SocialMedia({ type }: SocialMediaProps) {
     socialMediaContent = (
       <ul className="items-start justify-start gap-2 px-1 md:flex">
         <div className="mb-2 flex gap-2">
-          <Link
+          {/* <Link
             href="/"
             className="rounded-full  bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
           >
             <FaFacebookF className="h-5 w-5  text-complement1 md:h-6 md:w-6" />
-          </Link>
+          </Link> */}
           <Link
             href="https://www.instagram.com/mixservlog/"
             className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
@@ -35,12 +35,12 @@ export default function SocialMedia({ type }: SocialMediaProps) {
           >
             <FaWhatsapp className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
           </p>
-          <Link
+          {/* <Link
             href="/"
             className="rounded-full bg-terciary p-2 transition duration-300 ease-in-out hover:bg-primary"
           >
             <FaLinkedinIn className="h-5 w-5 text-complement1 md:h-6 md:w-6" />
-          </Link>
+          </Link> */}
         </div>
       </ul>
     );
