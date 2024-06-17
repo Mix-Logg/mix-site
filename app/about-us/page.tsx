@@ -18,7 +18,9 @@ export default function Aboutus() {
       <Wrapper>
         <BannerGlobal
           title="Sobre nós"
-          paragraph="a MIX Serviços Logísticos posiciona-se como uma força impulsionadora na transformação positiva do setor logístico brasileiro. Sua visão de criar uma comunidade de parceiros interligados destaca o comprometimento da empresa em promover uma logística eficiente, inteligente e orientada para o futuro."
+          paragraph="Somos uma empresa de tecnologia focada em Entregas, 
+            A Mix já realizou mais de 2 milhões de entregas a nossa missão é 
+            promover uma Entrega de Valor de forma inteligente com excelentes custos, benefícios e agilidade"
         />
         <div className="items-center justify-center gap-14 px-2 py-8 md:flex">
           <p className="text-justify text-sm font-normal text-secondary md:w-1/3 md:text-base">
