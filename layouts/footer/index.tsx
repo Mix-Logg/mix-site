@@ -27,18 +27,20 @@ export default function Footer() {
                 >
                   Cultura Mix
                 </Link>
-                {/* <Link
-                  href={`/`}
+                 <Link
+                  href={`/policy/conditions`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
-                  Label
+                  Termos e Condições de Uso
                 </Link>
+               
                 <Link
-                  href={`/`}
+                  href={`/policy/privacy`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
                 >
-                  Label
+                  Privacidade
                 </Link>
+                 {/*
                 <Link
                   href={`/`}
                   className="w-40 text-center font-normal text-secondary transition duration-300 ease-in-out hover:font-medium hover:text-primary"
