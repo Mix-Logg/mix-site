@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Header from "../../layouts/header";
 import Wrapper from "../../layouts/wrapper";
 import Footer from "../../layouts/footer";
@@ -10,7 +10,6 @@ import Cars from "../../assets/svg/cars.svg";
 import Word from "../../assets/svg/mixCompany.svg";
 import CompanyHelp from "../../assets/svg/companyhelp.svg";
 import handleSetState from "../../utils/handleSetState";
-import ReCAPTCHA from "react-google-recaptcha";
 import Button from "../../components/Button";
 import RemoveNonNumericCharacters from "../../utils/custom/remove-mask";
 import Modal from "../../components/Modal";
@@ -20,6 +19,7 @@ import cadasterCompany from "../../hooks/useCadasterCompany";
 import useCadasterCompany from "../../hooks/useCadasterCompany";
 import ContactMix from "../../layouts/contactMix";
 import useMessageWhatsAppCompany from "../../utils/useMessageWhatsAppCompany";
+
 
 export default function Company() {
   const [email, setEmail] = useState("");

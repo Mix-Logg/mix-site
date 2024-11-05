@@ -99,7 +99,7 @@ export default function Header() {
             <li className="w-28">
               <Link
                 className="text-base font-medium text-terciary transition duration-300 ease-in-out hover:bg-gradient-to-r hover:bg-clip-text hover:font-bold hover:text-primary"
-                href="https://dashboard-liart-xi.vercel.app/"
+                href="https://mixentregasdash.com.br/"
               >
                 Dashboard
               </Link>
