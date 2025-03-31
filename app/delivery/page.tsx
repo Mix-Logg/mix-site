@@ -11,6 +11,7 @@ import Benefits from "../../components/Benefits";
 import cellPhone from "../../assets/svg/cellphone.svg";
 import Ocean from "../../components/Ocean";
 import ContactMix from "../../layouts/contactMix";
+import Button from "../../components/Button";
 
 export default function Delivery() {
   return (
@@ -96,28 +97,45 @@ export default function Delivery() {
             </div>
           </FadeIn>
         </div>
-        <div className="mx-auto items-center justify-center gap-10 md:flex">
-          <div className="flex flex-col">
-            <Title
-              title="Nosso aplicativo"
-              subtitle="Você está conosco"
-              className="items-start"
-            />
-            <p className="w-72 text-justify text-sm font-normal text-secondary md:w-96 md:text-base">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
+        <div className="flex flex-col items-center justify-center gap-10">
+          <div className="mx-auto items-center justify-center gap-10 md:flex">
+            <div className="flex flex-col">
+              <Title
+                title="Nosso aplicativo"
+                subtitle="Você está conosco"
+                className="items-start"
+              />
+              <p className="w-72 text-justify text-sm font-normal text-secondary md:w-96 md:text-base">
+                O Mix Entregadores é um aplicativo pensado para 
+                facilitar a vida de motoqueiros, caminhoneiros e 
+                entregadores em geral. Desde o seu lançamento, ele 
+                tem se tornado uma ferramenta essencial para quem trabalha com 
+                transporte e logística, conectando esses profissionais a oportunidades de entregas de forma prática e 
+                eficiente. Desenvolvido para atender às necessidades do dia a dia, o app mantém sua essência simples e funcional, 
+                ajudando entregadores a encontrar serviços, gerenciar suas rotas e receber pagamentos com agilidade, tudo isso em uma 
+                plataforma moderna e confiável.
+              </p>
+            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src={cellPhone}
+                alt="celular"
+                className="mt-10 w-60 md:w-1/2"
+              />
+            </div>
           </div>
-          <div className="flex items-center justify-center">
-            <Image
-              src={cellPhone}
-              alt="celular"
-              className="mt-10 w-60 md:w-1/2"
-            />
+
+          <div className="flex items-center justify-center w-1/2">
+            <div className="w-1/2 ">
+                <Button
+                  onClick={() => {
+                    window.open("https://wa.me/5511978612671", "_blank");
+                  }}
+                  text="Acesso Antecipado"
+                  type="button"
+                  className="w-full"
+                />
+            </div>
           </div>
         </div>
       </Wrapper>
