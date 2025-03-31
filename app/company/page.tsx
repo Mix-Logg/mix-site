@@ -1,5 +1,5 @@
 "use client";
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Header from "../../layouts/header";
 import Wrapper from "../../layouts/wrapper";
 import Footer from "../../layouts/footer";
@@ -19,12 +19,17 @@ import cadasterCompany from "../../hooks/useCadasterCompany";
 import useCadasterCompany from "../../hooks/useCadasterCompany";
 import ContactMix from "../../layouts/contactMix";
 import useMessageWhatsAppCompany from "../../utils/useMessageWhatsAppCompany";
-
+import findCNPJ from "../../api/get/CNPJ";
+import CreateCompany from "../../api/post/Company";
+import { HiBadgeCheck } from "react-icons/hi";
 
 export default function Company() {
   const [email, setEmail] = useState("");
   const [corporateName, setCorporateName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [cnpj, setCnpj] = useState("");
   const [companyTelephone, setCompanyTelephone] = useState("");
+  const [finished, setFinished] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const {
     loader,
@@ -38,14 +43,31 @@ export default function Company() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setLoader(true);
-    setLoaderSuccessful(false);
-    await handleCadasterCompany(corporateName, email, companyTelephone);
+    const cnpjNoMask = cnpj.replace(/[^\d]/g, "");
+    const props = {
+      corporateName: corporateName,
+      email: email,
+      companyTelephone: companyTelephone,
+      cnpj: cnpjNoMask,
+    }
+
+    if(corporateName && email && companyTelephone && cnpj){
+      const response = await CreateCompany(props);
+      if(response.status === 201){
+        // alert('Empresa cadastrada com sucesso');
+        setFinished(true);
+      }else{
+        alert('Erro ao cadastrar empresa');
+      }
+    }else{
+      alert('Preencha todos os campos');
+    }
   };
 
   function onRecaptchaChange(value: string | null) {
     setRecaptchaValue(value);
   }
+
   const handleTeste = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     await handleCadasterCompany(corporateName, email, companyTelephone);
@@ -69,6 +91,19 @@ export default function Company() {
     }
   };
 
+  useEffect(() => {
+    const fetchCnpj = async () => {
+      if (cnpj.length === 14 || cnpj.length === 18) {
+        const cnpjNoMask = cnpj.replace(/[^\d]/g, "");
+        const response = await findCNPJ(cnpjNoMask);
+        setCompanyName(response.company.name);
+      }else{
+        console.log("CNPJ inválido");
+      }
+    };
+    fetchCnpj();
+  }, [cnpj]);
+
   return (
     <>
       <head>
@@ -91,26 +126,51 @@ export default function Company() {
           type="FAILED"
           show={loaderFailed}
         />
-        <div className=" items-center justify-center gap-4  md:flex md:flex-row-reverse">
+        <div className={`items-center justify-center ${finished ? 'gap-4' : 'gap-14'}   md:flex md:flex-row-reverse`}>
           <FadeIn>
-            <form
+            { !finished ?
+              <form
               action="#"
               method="POST"
               className="flex max-w-md flex-col space-y-4 rounded-xl border border-neutral-200 bg-complement1 p-3"
-              onSubmit={handleTeste}
+              onSubmit={handleSubmit}
             >
               <Title title="Cadastre sua empresa" subtitle="" className="" />
 
               <Input
-                label="Razão Social"
-                idInput="corporateName"
-                placeholder="Mix Serviços Logísticos"
-                maskType="NONE"
+                label="CNPJ"
+                idInput="cnpj"
+                placeholder="12.345.678/0001-90"
+                maskType="CNPJ"
                 required
                 type="text"
-                value={corporateName}
-                handleOnChange={handleSetState(setCorporateName)}
+                value={cnpj}
+                handleOnChange={handleSetState(setCnpj)}
               />
+              <div className="flex gap-4">
+                <Input
+                  label="Razão Social"
+                  idInput="corporateName"
+                  placeholder="Mix Serviços Logísticos"
+                  maskType="NONE"
+                  required
+                  type="text"
+                  value={corporateName}
+                  handleOnChange={handleSetState(setCorporateName)}
+                />
+
+              <Input
+                  label="Empresa"
+                  idInput="companyName"
+                  placeholder="Mix Serviços Logísticos"
+                  maskType="NONE"
+                  required
+                  type="text"
+                  value={companyName}
+                  handleOnChange={handleSetState(setCompanyName)}
+                />
+
+              </div>
 
               <div className="flex gap-4">
                 <Input
@@ -147,7 +207,15 @@ export default function Company() {
                 text="Cadastrar agora"
                 className="w-full rounded-lg border-none bg-primary text-lg text-white"
               />
-            </form>
+              </form>
+              :
+              <div className="flex flex-col items-center justify-center gap-4">
+                <h2 className={`text-xs md:text-sm font-extralight uppercase tracking-widest text-secondary`}>
+                  Empresa cadastrada com sucesso!
+                </h2>
+                <HiBadgeCheck className="text-primary" size={100} />
+              </div>
+            }
           </FadeIn>
 
           <FadeIn>

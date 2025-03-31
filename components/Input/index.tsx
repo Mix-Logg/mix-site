@@ -64,6 +64,7 @@ export default function Input({
   hasError,
   label,
   maskType,
+  disabled = false,
 }: InputProps & LabelProps) {
   
   return (
@@ -83,6 +84,7 @@ export default function Input({
           value={value}
           type={type}
           mask={Mask(maskType)}
+          disabled={disabled}
           required={required}
           className={`${className} ${width}  ${height} ${padding} text-sm ${textColor} ${hoverBgColor} border-neutral-300 bg-complement1 font-normal transition duration-300 ease-in-out hover:border-primary ${ringColor} ${focusRingColor}  focus:outline-non rounded-md placeholder-secondary shadow-sm focus:outline-none ${
             hasError && "text-red-500 ring-red-500"
