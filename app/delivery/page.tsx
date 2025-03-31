@@ -129,7 +129,7 @@ export default function Delivery() {
             <div className="w-1/2 ">
                 <Button
                   onClick={() => {
-                    window.open("https://wa.me/5511978612671", "_blank");
+                    window.open("https://wa.me/5511978612671?text=Olá, gostaria de saber mais sobre o acesso antecipado ao aplicativo Mix Entregadores.", "_blank");
                   }}
                   text="Acesso Antecipado"
                   type="button"
